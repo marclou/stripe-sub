@@ -53,6 +53,7 @@ export default function Layout({ children }) {
         }
       `}</style>
 
+      {/* Automatically show a progress bar at the top when navigating between pages */}
       <NextNProgress
         color={config.colors.main}
         options={{ showSpinner: false }}
@@ -60,6 +61,7 @@ export default function Layout({ children }) {
 
       {children}
 
+      {/* Show Success/Error messages anywhere from the app with toast() */}
       {isMounted && (
         <Toaster
           toastOptions={{
@@ -68,6 +70,7 @@ export default function Layout({ children }) {
         />
       )}
 
+      {/* Show tooltips if any JSX elements has these 2 attributes: data-tooltip-id="tooltip" data-tooltip-content="" */}
       <Tooltip id="tooltip" className="z-[60] !opacity-100 max-w-sm" />
     </ErrorBoundary>
   );
