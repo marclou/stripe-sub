@@ -14,7 +14,7 @@ const defaults = {
   },
 };
 
-// This components should be added to every pages you want to rank on Google (in /pages directory)
+// This components should be added to every pages you want to rank on Google (in /pages directory). It prefills data with default title/description/OG but you can cusotmize it for each page.
 const TagSEO = ({
   children,
   title,
@@ -41,6 +41,7 @@ const TagSEO = ({
       />
 
       {/* OG METAS */}
+      <meta property="og:type" content="website" />
       <meta property="og:title" content={og?.title || defaults.og.title} />
       <meta
         property="og:description"
@@ -53,6 +54,8 @@ const TagSEO = ({
         content={og?.image || defaults.og.image}
       />
       <meta property="og:url" content={og?.url || defaults.og.url} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content="@marc_louvion" />
 
       {/* CANONICAL TAG */}
       <link
