@@ -1,5 +1,6 @@
 import React from "react";
 import { signOut } from "next-auth/react";
+import Link from "next/link";
 import ButtonSupport from "./ButtonSupport";
 
 class ErrorBoundary extends React.Component {
@@ -15,40 +16,34 @@ class ErrorBoundary extends React.Component {
     });
   }
 
-  goTo = (path) => {
-    window.location.href = window.location.origin + path;
-  };
-
   render() {
     if (this.state.errorInfo) {
       return (
         <>
           <div className="h-screen w-full flex flex-col justify-center items-center text-center gap-6 p-6">
-            <p className="font-medium text-xl">Something went wrong 🥲</p>
+            <p className="font-medium">Something went wrong 🥲</p>
 
             <p className="text-red-500">{this.state.error?.message}</p>
 
             <ButtonSupport showTextOnSmall={true} />
 
-            <button
-              className="btn btn-sm btn-neutral gap-1"
-              onClick={() => this.goTo("/app/dashboard")}
-            >
+            <Link href="/" className="btn btn-sm">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 className="w-5 h-5"
               >
-                <path d="M10 8a3 3 0 100-6 3 3 0 000 6zM3.465 14.493a1.23 1.23 0 00.41 1.412A9.957 9.957 0 0010 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 00-13.074.003z" />
+                <path
+                  fillRule="evenodd"
+                  d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z"
+                  clipRule="evenodd"
+                />
               </svg>
-              Dashboard
-            </button>
+              Home
+            </Link>
 
-            <button
-              className="btn btn-sm btn-ghost gap-1"
-              onClick={() => signOut()}
-            >
+            <button className="btn btn-sm btn-ghost" onClick={() => signOut()}>
               Logout
             </button>
           </div>
