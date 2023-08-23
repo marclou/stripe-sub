@@ -25,7 +25,7 @@ export default function Home() {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
-                  className="w-[18px] h-[18px]"
+                  className="w-[18px] h-[18px] opacity-80"
                 >
                   <path
                     fillRule="evenodd"

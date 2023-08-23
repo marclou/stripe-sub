@@ -1,13 +1,8 @@
-import { Bricolage_Grotesque } from "next/font/google";
 import Link from "next/link";
-
-const font = Bricolage_Grotesque({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-center text-center gap-12 p-8 ${font.className}`}
-    >
+    <main className="flex min-h-screen flex-col items-center justify-center text-center gap-12 p-8">
       <h1 className="text-3xl font-bold">Ship Fast ⚡️</h1>
 
       <p className="text-lg opacity-80">

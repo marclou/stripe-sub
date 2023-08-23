@@ -32,4 +32,6 @@ I use [TailwindCSS](https://tailwindcss.com/) as a CSS framework. I added some c
 
 I use [DaisyUI](https://daisyui.com/) as a UI kit. Open tailwind.config.js file to config the themes. Light & Dark themes are enabled by default.
 
+### Layout.js
+
 ### Spotify Playlist \_ no joke
