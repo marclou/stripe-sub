@@ -1,3 +1,12 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals", "eslint:recommended"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    // Your specific rules.
+    "no-unused-vars": "warn"
+  }
 }
