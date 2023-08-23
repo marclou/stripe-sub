@@ -34,7 +34,7 @@ export default function Home() {
         </div>
       </section>
 
-      <ul className="list-inside list-decimal space-y-4 leading-relaxed">
+      <ul className="list-inside list-decimal space-y-5 leading-relaxed">
         {[
           <span key={1}>
             Create a new project on{" "}
@@ -48,6 +48,55 @@ export default function Home() {
           </span>,
           <span key={2}>Go to APIs & Services then Credentials</span>,
           <span key={3}>Click [Configure Consent Screen]</span>,
+          <span key={4}>
+            Fill info. Use the ChatGPT prompt in pages /tos & /privacy-policy to
+            generate yours automatically.
+            <br />
+            Add userinfo.email & userinfo.profile to scope.
+            <br />
+            Add yourself as a test user.
+            <br />
+            Submit.
+          </span>,
+          <span key={5}>
+            Go to Credentials and click [+ Create Credentials] then [Oauth
+            Client ID]
+          </span>,
+          <span key={6}>
+            Choose [Web Application].
+            <br />
+            Add http://localhost:3000 and https://your-site.com to Authorized
+            JavaScript origins.
+            <br />
+            Add http://localhost:3000/api/auth/callback/google and
+            https://your-site.com/api/auth/callback/google to Authorized
+            redirect URIs.
+            <br />
+            Click [Create]
+          </span>,
+          <span key={7}>
+            Copy paste the Client ID (GOOGLE_ID) and Client Secret
+            (GOOGLE_SECRET) to .env.local.
+          </span>,
+          <span key={7}>
+            Go to [Oauth Consent Screen] and click [Publish App] then submit for
+            verification
+            <br />
+            Google will email you and you will{" "}
+            <b>have to reply to start the process</b>. You&apos;ll need to have
+            your domain verified with{" "}
+            <a
+              href="https://search.google.com/search-console"
+              target="_blank"
+              className="link"
+            >
+              Google Search Console
+            </a>
+            . You can go ahead and do that now.
+            <br />
+            You can already login with Google on localhost. On production, it
+            will work too but show a warning until you&apos;re verified.
+          </span>,
         ].map((step, i) => (
           <li key={i} className="list-item">
             {step}
