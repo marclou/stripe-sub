@@ -1,3 +1,4 @@
+import Head from "next/head";
 import config from "@/config";
 
 // Strctured Data for Rich Results on Google. Learn more: https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data
@@ -8,37 +9,39 @@ import config from "@/config";
 // Fill the fields with your own data
 const TagSchema = () => {
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "http://schema.org",
-          "@type": "SoftwareApplication",
-          name: "AppName",
-          description: "60 to 180 characters",
-          image: `https://${config.domainName}/logo.png`,
-          url: `https://${config.domainName}/`,
-          author: {
-            "@type": "Person",
-            name: "Marc Lou",
-          },
-          datePublished: "2023-08-01",
-          applicationCategory: "EducationalApplication",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.8",
-            ratingCount: "12",
-          },
-          offers: [
-            {
-              "@type": "Offer",
-              price: "9.00",
-              priceCurrency: "USD",
+    <Head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "http://schema.org",
+            "@type": "SoftwareApplication",
+            name: "AppName",
+            description: "60 to 180 characters",
+            image: `https://${config.domainName}/logo.png`,
+            url: `https://${config.domainName}/`,
+            author: {
+              "@type": "Person",
+              name: "Marc Lou",
             },
-          ],
-        }),
-      }}
-    ></script>
+            datePublished: "2023-08-01",
+            applicationCategory: "EducationalApplication",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.8",
+              ratingCount: "12",
+            },
+            offers: [
+              {
+                "@type": "Offer",
+                price: "9.00",
+                priceCurrency: "USD",
+              },
+            ],
+          }),
+        }}
+      ></script>
+    </Head>
   );
 };
 
