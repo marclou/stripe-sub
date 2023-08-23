@@ -1,0 +1,41 @@
+import Link from "next/link";
+
+const Tutorial = () => {
+  return (
+    <main
+      className={`flex max-w-3xl mx-auto min-h-screen flex-col gap-16 p-8 mb-24`}
+    >
+      <section>
+        <h1 className="text-3xl font-bold">Tutorial — Ship Fast ⚡️</h1>
+      </section>
+
+      <section>
+        <Link
+          href="/tutorial/tailwind"
+          className="p-4 -mx-4 rounded-lg hover:bg-base-200 duration-200 flex justify-between items-center gap-2 group"
+        >
+          <div>
+            <h2 className="font-bold md:text-lg md:mb-1">Tailwind</h2>
+            <p className="opacity-80 text-sm md:text-base">
+              Custom animations, default and custom components
+            </p>
+          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="w-5 h-5 group-hover:translate-x-0.5 duration-200"
+          >
+            <path
+              fillRule="evenodd"
+              d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </Link>
+      </section>
+    </main>
+  );
+};
+
+export default Tutorial;
