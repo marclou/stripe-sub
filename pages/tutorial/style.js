@@ -36,7 +36,7 @@ export default function Home() {
                 Tutorial
               </Link>
             </li>
-            <li>Tailwind</li>
+            <li>Style & Components</li>
           </ul>
         </div>
       </section>
