@@ -1,6 +1,6 @@
 const config = {
-  appName: "Your Startup",
-  domainName: "your-startup.com",
+  appName: "ShipFast",
+  domainName: "shipfa.st",
   crisp: {
     id: "3878e3c2-74cb-498b-a360-4419fb8e7c9b",
     // If you want to show Crisp on every routes, just remove this below
@@ -25,11 +25,11 @@ const config = {
   },
   aws: {
     bucket: "bucket-name",
-    bucketUrl: `https://bukcet-name.s3.amazonaws.com/`,
+    bucketUrl: `https://bucket-name.s3.amazonaws.com/`,
     cdn: "https://cdn-id.cloudfront.net/",
   },
   mailgun: {
-    from: `Your Startup <noreply@mg.your-startup.com>`,
+    from: `ShipFast <noreply@mg.shipfa.st>`,
   },
   colors: {
     main: "#f37055",
