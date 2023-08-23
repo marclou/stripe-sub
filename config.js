@@ -1,5 +1,6 @@
 const config = {
-  domainName: "your-site.com",
+  appName: "Your Startup",
+  domainName: "your-startup.com",
   crisp: {
     id: "3878e3c2-74cb-498b-a360-4419fb8e7c9b",
     // If you want to show Crisp on every routes, just remove this below
@@ -28,7 +29,7 @@ const config = {
     cdn: "https://cdn-id.cloudfront.net/",
   },
   mailgun: {
-    from: `Your Site <noreply@mg.your-site.com>`,
+    from: `Your Startup <noreply@mg.your-startup.com>`,
   },
   colors: {
     main: "#f37055",

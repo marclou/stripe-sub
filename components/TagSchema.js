@@ -16,7 +16,7 @@ const TagSchema = () => {
           __html: JSON.stringify({
             "@context": "http://schema.org",
             "@type": "SoftwareApplication",
-            name: "AppName",
+            name: config.appName,
             description: "60 to 180 characters",
             image: `https://${config.domainName}/logo.png`,
             url: `https://${config.domainName}/`,

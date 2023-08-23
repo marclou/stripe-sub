@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import config from "@/config";
 
 const defaults = {
-  title: "up to 50 characters | App Name",
+  title: `up to 50 characters | ${config.appName}`,
   description: "60 to 180 characters",
-  keywords: "App Name, some other keywords if needed",
+  keywords: `${config.appName}, some other keywords if needed`,
   og: {
-    title: "up to 50 characters | App Name",
+    title: `up to 50 characters | ${config.appName}`,
     description: "60 to 180 characters",
     image: `https://${config.domainName}/shareMain.png`,
     url: `https://${config.domainName}/`,

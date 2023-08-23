@@ -1,10 +1,12 @@
 import Link from "next/link";
 import TagSEO from "@/components/TagSEO";
+import TagSchema from "@/components/TagSchema";
 
 export default function Home() {
   return (
     <>
       <TagSEO canonicalSlug="" />
+      <TagSchema />
 
       <main className="flex min-h-screen flex-col items-center justify-center text-center gap-12 p-8">
         <h1 className="text-3xl font-bold">Ship Fast ⚡️</h1>
