@@ -1,10 +1,10 @@
 import Link from "next/link";
-import SEOTags from "@/components/SEOTags";
+import TagSEO from "@/components/TagSEO";
 
 export default function Home() {
   return (
     <>
-      <SEOTags canonicalSlug="" />
+      <TagSEO canonicalSlug="" />
       <main className="flex min-h-screen flex-col items-center justify-center text-center gap-12 p-8">
         <h1 className="text-3xl font-bold">Ship Fast ⚡️</h1>
 

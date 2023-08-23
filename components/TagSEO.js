@@ -15,7 +15,7 @@ const defaults = {
 };
 
 // This components should be added to every pages you want to rank on Google (in /pages directory)
-const SEOTags = ({
+const TagSEO = ({
   children,
   title,
   description,
@@ -66,8 +66,8 @@ const SEOTags = ({
   );
 };
 
-export default SEOTags;
+export default TagSEO;
 
-SEOTags.propTypes = {
+TagSEO.propTypes = {
   canonicalSlug: PropTypes.string.isRequired,
 };
