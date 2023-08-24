@@ -19,7 +19,7 @@ export default function Layout({ children }) {
 
   // Set Crisp Chat Support
   useEffect(() => {
-    if (router.isReady && config.crisp.id) {
+    if (router.isReady && config?.crisp?.id) {
       Crisp.configure(config.crisp.id);
 
       // If config file has onlyShowOnRoutes, will be hidden on the routes in the array. <AppButtonSupport> to toggle it
@@ -36,7 +36,7 @@ export default function Layout({ children }) {
 
   // Add User Unique ID to Crisp to easily identify users when reaching support
   useEffect(() => {
-    if (data?.user) {
+    if (data?.user && config?.crisp?.id) {
       Crisp.session.setData({ userId: data.user?.id });
     }
   }, [data]);

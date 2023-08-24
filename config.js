@@ -1,12 +1,14 @@
 const config = {
+  // REQUIRED
   appName: "ShipFast",
+  // REQUIRED
   domainName: "shipfa.st",
   crisp: {
+    // REQUIRED — Crisp website ID. If you don't use Crisp, just remove this below
     id: "3878e3c2-74cb-498b-a360-4419fb8e7c9b",
-    // If you want to show Crisp on every routes, just remove this below
+    // Hide Crisp by default. If you want to show Crisp on every routes, just remove this below
     onlyShowOnRoutes: ["/"],
   },
-  adminEmail: "",
   stripe: {
     plans: [
       {
@@ -24,6 +26,7 @@ const config = {
     ],
   },
   aws: {
+    // If you use AWS S3/Cloudfront, put values in here
     bucket: "bucket-name",
     bucketUrl: `https://bucket-name.s3.amazonaws.com/`,
     cdn: "https://cdn-id.cloudfront.net/",
@@ -39,7 +42,7 @@ const config = {
     forwardRepliesTo: "marc.louvion@gmail.com",
   },
   colors: {
-    // This colors will be reflected on the whole app (loading bar, Chrome tabs, etc..)
+    // REQUIRED — This colors will be reflected on the whole app (loading bar, Chrome tabs, etc..)
     main: "#f37055",
   },
 };
