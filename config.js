@@ -4,7 +4,7 @@ const config = {
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: "shipfa.st",
   crisp: {
-    // REQUIRED — Crisp website ID. If you don't use Crisp, just remove this below
+    // REQUIRED — Crisp website ID. If you don't use Crisp, just remove this below. => Add a support email in this config file (mailgun.supportEmail) otherwise customer support won't work.
     id: "3878e3c2-74cb-498b-a360-4419fb8e7c9b",
     // Hide Crisp by default. If you want to show Crisp on every routes, just remove this below
     onlyShowOnRoutes: ["/"],
@@ -38,7 +38,7 @@ const config = {
     fromNoReply: `ShipFast <noreply@mg.shipfa.st>`,
     // REQUIRED — Email 'From' field to be used when sending other emails, like abandoned carts, updates etc..
     fromAdmin: `Marc at ShipFast <marc@mg.shipfa.st>`,
-    // If you want user to email you for support use this email. Leave empty if not needed
+    // If you want user to email you for support use this email. Leave empty if not needed => if empty, set up Crisp above, otherwise you won't be able to offer customer support.
     supportEmail: "marc@mg.shipfa.st",
     // When someone replies to supportEmail sent by the app, forward it to the email below (otherwise it's lost). If you set supportEmail to empty, this will be ignored.
     forwardRepliesTo: "marc.louvion@gmail.com",
