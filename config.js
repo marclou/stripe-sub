@@ -1,7 +1,7 @@
 const config = {
   // REQUIRED
   appName: "ShipFast",
-  // REQUIRED
+  // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: "shipfa.st",
   crisp: {
     // REQUIRED — Crisp website ID. If you don't use Crisp, just remove this below
@@ -38,11 +38,13 @@ const config = {
     fromNoReply: `ShipFast <noreply@mg.shipfa.st>`,
     // REQUIRED — Email 'From' field to be used when sending other emails, like abandoned carts, updates etc..
     fromAdmin: `Marc at ShipFast <marc@mg.shipfa.st>`,
-    // When someone replies to an email sent by the app, forward it to this email. Leave empty to disable this feature
+    // If you want user to email you for support use this email. Leave empty if not needed
+    supportEmail: "marc@mg.shipfa.st",
+    // When someone replies to supportEmail sent by the app, forward it to the email below (otherwise it's lost). If you set supportEmail to empty, this will be ignored.
     forwardRepliesTo: "marc.louvion@gmail.com",
   },
   colors: {
-    // REQUIRED — This colors will be reflected on the whole app (loading bar, Chrome tabs, etc..)
+    // REQUIRED — This colors will be reflected on the whole app (loading bar, Chrome tabs, etc..) HEX only
     main: "#f37055",
   },
 };
