@@ -58,6 +58,23 @@ export default function Home() {
           ))}
         </ul>
       </section>
+
+      <section>
+        <h2 className="font-bold text-xl mb-4">Mongoose (optional)</h2>
+
+        <p className="leading-relaxed">
+          Mongoose makes it easier to deal with MongoDB and has some cool
+          features.
+          <br />
+          Models are defined in the folder /models. Add any new models there.
+          <br />
+          The plugin toJSON is added to all models to remove the _id and __v
+          (easier on front-end). Also if you add{" "}
+          <pre className="inline bg-base-300 px-1">private: true</pre> to any
+          field it will be removed from the response. I.e. make email private so
+          it&apos;s not sent to the front-end.
+        </p>
+      </section>
     </main>
   );
 }
