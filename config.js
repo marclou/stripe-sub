@@ -29,10 +29,14 @@ const config = {
     cdn: "https://cdn-id.cloudfront.net/",
   },
   mailgun: {
+    // subdomain to use when sending emails, if you don't have a subdomain, just remove it. Highly recommended to have one (i.e. mg.yourdomain.com or mail.yourdomain.com)
+    subdomain: "mg",
     // Email 'From' field to be used when sending magic login links
     fromNoReply: `ShipFast <noreply@mg.shipfa.st>`,
     // Email 'From' field to be used when sending other emails, like abandoned carts, updates etc..
     fromAdmin: `Marc at ShipFast <marc@mg.shipfa.st>`,
+    // When someone replies to an email sent by the app, forward it to this email. Leave empty to disable this feature
+    forwardRepliesTo: "marc.louvion@gmail.com",
   },
   colors: {
     // This colors will be reflected on the whole app (loading bar, Chrome tabs, etc..)

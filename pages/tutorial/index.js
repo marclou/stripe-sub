@@ -16,25 +16,31 @@ const Tutorial = () => {
       <section className="space-y-4">
         {[
           {
-            name: "Style & Components",
-            href: "/tutorial/style",
-            // description: "Custom animations, default and custom components",
-            emoji: "🎨",
-          },
-          {
             name: "MongoDB database",
             href: "/tutorial/mongodb-atlas",
             emoji: "📦",
           },
           {
+            name: "Sending & receiving emails",
+            href: "/tutorial/emails",
+            emoji: "📧",
+          },
+          {
             name: "Login with Google",
             href: "/tutorial/login-with-google",
+            optional: true,
             emoji: "🔑",
           },
           {
             name: "Login with email",
             href: "/tutorial/login-with-email",
+            optional: true,
             emoji: "🔑",
+          },
+          {
+            name: "Style & Components",
+            href: "/tutorial/style",
+            emoji: "🎨",
           },
         ].map((tutorial) => (
           <Link
@@ -44,7 +50,12 @@ const Tutorial = () => {
           >
             <div>
               <h2 className="font-bold md:text-lg md:mb-1">
-                {tutorial.emoji}&nbsp;&nbsp;&nbsp;{tutorial.name}
+                {tutorial.emoji}&nbsp;&nbsp;&nbsp;{tutorial.name}{" "}
+                {tutorial.optional && (
+                  <span className="badge badge-sm font-normal ml-1">
+                    optional
+                  </span>
+                )}
               </h2>
               <p className="opacity-80 text-sm md:text-base">
                 {tutorial.description}

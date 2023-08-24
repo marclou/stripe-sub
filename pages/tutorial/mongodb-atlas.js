@@ -33,6 +33,10 @@ export default function Home() {
       </section>
 
       <section>
+        <p className="text-sm opacity-80 mb-6">
+          You don&apos;t have to use MongoDB, but you&apos;ll need a database
+          for saving users who log in, products, orders, etc...
+        </p>
         <ul className="list-inside list-decimal space-y-5 leading-relaxed">
           {[
             <span key={1}>
