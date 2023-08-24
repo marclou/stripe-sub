@@ -2,6 +2,8 @@ import Head from "next/head";
 import PropTypes from "prop-types";
 import config from "@/config";
 
+// Predefined SEO tags — prefilled with default values but you can customize them for each page
+// This let you add default SEO tags to all pages, like /terms, /privacy, without rewrtting them all
 const defaults = {
   title: `up to 50 characters | ${config.appName}`,
   description: "60 to 180 characters",

@@ -59,9 +59,24 @@ const Tutorial = () => {
             emoji: "🛟",
           },
           {
+            name: "SEO",
+            href: "/tutorial/seo",
+            emoji: "🔍",
+          },
+          {
+            name: "Analytics",
+            href: "/tutorial/analytics",
+            emoji: "📈",
+          },
+          {
             name: "Style & Components",
             href: "/tutorial/style",
             emoji: "🎨",
+          },
+          {
+            name: "Extra",
+            href: "/tutorial/extra",
+            emoji: "🥐",
           },
         ].map((tutorial, i) => (
           <Link
