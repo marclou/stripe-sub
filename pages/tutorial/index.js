@@ -87,6 +87,12 @@ const Tutorial = () => {
           </Link>
         ))}
       </section>
+      <div className="divider"></div>
+      <section>
+        <Link className="btn" href="/tutorial/demo">
+          Start App Demo
+        </Link>
+      </section>
     </main>
   );
 };

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { signIn } from "next-auth/react";
+
 import TagSEO from "@/components/TagSEO";
 import TagSchema from "@/components/TagSchema";
 
@@ -31,10 +31,6 @@ export default function Home() {
             />
           </svg>
         </Link>
-
-        <button className="btn btn-ghost" onClick={signIn}>
-          Login
-        </button>
       </main>
     </>
   );

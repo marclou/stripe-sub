@@ -12,9 +12,11 @@ const config = {
   stripe: {
     plans: [
       {
-        name: "Starter",
+        // REQUIRED — we use this to find the plan in the webhook (for instance if you want to update the user's credits based on the plan)
         priceId:
           process.env.NODE_ENV === "development" ? "price_123" : "price_456",
+        // Name, price, features are optional. I use them to display the plan & benefits on the pricing page
+        name: "Starter",
         price: 19,
         features: [
           {
