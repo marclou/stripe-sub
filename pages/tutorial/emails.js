@@ -94,13 +94,24 @@ export default function Home() {
             </span>,
             <span key={2431}>
               (skip if do not need to receive emails) In [Receiving] click
-              [Create Route]. Select [Match Recipient] and add your sending
-              email (i.e. name@mail.yourdomain.com). Forward to{" "}
+              [Create Route].
+              <br />
+              Select [Match Recipient] and add the email you want to send from.
+              (i.e. name@mail.yourdomain.com).{" "}
+              <b>
+                Make sure to match the email you set up at mailgun.supportEmail
+                in the config.js file
+              </b>
+              .
+              <br />
+              Forward to{" "}
               <span className="bg-base-300/80 whitespace-nowrap select-all">
                 https://your-domain.com/api/webhook/mailgun
               </span>
-              . Click [Create Route]. Then add your receiving email (I use my
-              gmail for instance) in mailgun.forwardREpliesTo in config.js.
+              . Click [Create Route].
+              <br />
+              Then add your receiving email (I use my gmail for instance) in
+              mailgun.forwardREpliesTo in config.js.
             </span>,
             <span key={4321}>
               Tip: check your records are valid on{" "}
@@ -119,18 +130,24 @@ export default function Home() {
         <div className="mt-4">
           <h2 className="font-bold text-xl mb-4">Sending emails</h2>
           <p className="leading-relaxed">
-            Emails sent for magic login links will be sent using SMTP.
+            There are 2 ways to send emails:
             <br />
-            To send any other emails, use the sendEmai() function in
-            libs/mailgun.js (it uses the Mailgun API)
+            1/ SMTP: Emails sent for magic login links will be sent using SMTP,
+            for instance.
+            <br />
+            2/ Mailgun API: To send any other emails, use the sendEmai()
+            function in libs/mailgun.js.
           </p>
         </div>
         <div className="mt-8">
           <h2 className="font-bold text-xl mb-4">Receiving emails</h2>
           <p className="leading-relaxed">
             Mailgun doesn&apos;t forward emails automatically, nor store them.
-            So we forward them to our API (your-domain.com/api/webhook/mailgun)
-            which forward them to our forwardRepliesTo email in config.js.
+            <br />
+            So we created a route that match emails sent to our support email
+            (mailgun.supportEmail in config.js) and forward them to our API
+            (your-domain.com/api/webhook/mailgun) which forwards them to our
+            forwardRepliesTo email in config.js.
             <br />
             It automatically adds the sender in reply-to so you can reply
             directly from your inbox.
