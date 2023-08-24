@@ -16,6 +16,11 @@ const Tutorial = () => {
       <section className="space-y-4">
         {[
           {
+            name: "Get started",
+            href: "/tutorial/important",
+            emoji: "👋",
+          },
+          {
             name: "MongoDB",
             href: "/tutorial/mongodb-atlas",
             emoji: "📦",
@@ -58,7 +63,7 @@ const Tutorial = () => {
             href: "/tutorial/style",
             emoji: "🎨",
           },
-        ].map((tutorial) => (
+        ].map((tutorial, i) => (
           <Link
             key={tutorial.name}
             href={tutorial.href}
@@ -72,6 +77,11 @@ const Tutorial = () => {
                     optional
                   </span>
                 )} */}
+                {i === 0 && (
+                  <span className="badge badge-sm font-medium badge-warning ml-2">
+                    Must-read
+                  </span>
+                )}
               </h2>
               <p className="opacity-80 text-sm md:text-base">
                 {tutorial.description}
@@ -95,9 +105,11 @@ const Tutorial = () => {
       <div className="divider"></div>
       <section className="space-y-5">
         <h3 className="text-lg font-bold">Try the signup/logout flow</h3>
-        <p>
+        <p className="text-base-content/80">
           Find the code in the /tutorial/demo folder to get inspired and{" "}
-          <span className="font-medium">build your app fast ⚡️</span>
+          <span className="font-medium text-base-content">
+            build your app fast ⚡️
+          </span>
         </p>
         <Link className="btn" href="/tutorial/demo">
           Start App Demo

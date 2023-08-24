@@ -15,7 +15,7 @@ export default function Home() {
       className={`flex max-w-3xl mx-auto min-h-screen flex-col gap-16 p-8 mb-24`}
     >
       <section>
-        <h1 className="text-3xl font-bold mb-4">Tailwind — Ship Fast ⚡️</h1>
+        <h1 className="text-3xl font-bold mb-4">Style — Ship Fast ⚡️</h1>
 
         <div className="text-sm breadcrumbs">
           <ul>
@@ -136,6 +136,11 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <p className="text-sm opacity-80">
+        💡 These animations & components live outside of the /tutorial folder.
+        So you won&apos;t lose them when deleting it
+      </p>
     </main>
   );
 }
