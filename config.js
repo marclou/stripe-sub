@@ -29,9 +29,13 @@ const config = {
     cdn: "https://cdn-id.cloudfront.net/",
   },
   mailgun: {
-    from: `ShipFast <noreply@mg.shipfa.st>`,
+    // Email 'From' field to be used when sending magic login links
+    fromNoReply: `ShipFast <noreply@mg.shipfa.st>`,
+    // Email 'From' field to be used when sending other emails, like abandoned carts, updates etc..
+    fromAdmin: `Marc at ShipFast <marc@mg.shipfa.st>`,
   },
   colors: {
+    // This colors will be reflected on the whole app (loading bar, Chrome tabs, etc..)
     main: "#f37055",
   },
 };

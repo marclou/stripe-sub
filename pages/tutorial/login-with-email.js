@@ -6,7 +6,7 @@ export default function Home() {
       className={`flex max-w-3xl mx-auto min-h-screen flex-col gap-16 p-8 mb-24`}
     >
       <section>
-        <h1 className="text-3xl font-bold mb-4">Tailwind — Ship Fast ⚡️</h1>
+        <h1 className="text-3xl font-bold mb-4">Email Login — Ship Fast ⚡️</h1>
 
         <div className="text-sm breadcrumbs">
           <ul>
@@ -27,9 +27,77 @@ export default function Home() {
                 Tutorial
               </Link>
             </li>
-            <li>Google Login</li>
+            <li>Email Login</li>
           </ul>
         </div>
+      </section>
+
+      <section>
+        <ul className="list-inside list-decimal space-y-5 leading-relaxed">
+          {[
+            <span key={1}>
+              Create a new account on{" "}
+              <a
+                href="https://www.mailgun.com/"
+                className="link"
+                target="_blank"
+              >
+                Mailgun
+              </a>
+            </span>,
+            "In [Sending] click [Domains] then [Add New Domain]. It's recommended to add a subdomain like mail.yourdomain.com",
+            "Do all the DNS verification steps. If you use a subdomain, make sure it's reflected in your DNS records",
+            <span key={12341}>
+              Add extra DMARC for better deliverability:{" "}
+              <p>
+                TXT | dmarc.mail.yourdomain.com |{" "}
+                <span className="whitespace-nowrap select-all">
+                  v=DMARC1; p=none
+                </span>
+              </p>
+            </span>,
+            // <span key={43234}>
+            //   Add extra SPF on naked domain if you send with a subdomain:{" "}
+            //   <p>
+            //     TXT | yourdomain.com |{" "}
+            //     <span className="whitespace-nowrap select-all">
+            //       v=spf1 include:mailgun.org ~all
+            //     </span>
+            //   </p>
+            // </span>,
+            // <span key={43234}>
+            //   Add extra DKIM on naked domain if you send with a subdomain:{" "}
+            //   <p>
+            //     TXT | yourdomain.com |{" "}
+            //     <span className="whitespace-nowrap select-all">
+            //       [to generate with mailgun]
+            //     </span>
+            //   </p>
+            // </span>,
+            "Go to [Domain Settings] then [SMTP Credentials] choose [Automatic] and then [Create Passsword]",
+            <span key={423321}>
+              Click [Copy] at the bottom right of the modal. In .env.local, set
+              EMAIL_SERVER to:
+              <br />
+              <span className="select-all bg-base-300/80">
+                smtp://postmaster@[mail.yourdomain.com]:[copied_password]@smtp.mailgun.org:587
+              </span>{" "}
+              (without the brackets)
+            </span>,
+            "Try logging in with your email. You should receive a magic link.",
+            <span key={4321}>
+              Tip: check your records are valid on{" "}
+              <a href="https://mxtoolbox.com/" target="_blank" className="link">
+                MxToolbox
+              </a>{" "}
+              (enter your subdomain if you used one)
+            </span>,
+          ].map((step, i) => (
+            <li key={i} className="list-item">
+              {step}
+            </li>
+          ))}
+        </ul>
       </section>
     </main>
   );

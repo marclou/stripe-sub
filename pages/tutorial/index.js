@@ -22,6 +22,11 @@ const Tutorial = () => {
             emoji: "🎨",
           },
           {
+            name: "MongoDB database",
+            href: "/tutorial/mongodb-atlas",
+            emoji: "📦",
+          },
+          {
             name: "Login with Google",
             href: "/tutorial/login-with-google",
             emoji: "🔑",

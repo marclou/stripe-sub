@@ -6,9 +6,12 @@ import connectMongo from "@/libs/mongo";
 import config from "@/config";
 
 export const authOptions = {
+  // Set any random key in .env.local
   secret: process.env.NEXTAUTH_SECRET,
+
   providers: [
     GoogleProvider({
+      // Follow the "Login with Google" tutorial to get your credentials
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
       async profile(profile) {
@@ -21,11 +24,13 @@ export const authOptions = {
         };
       },
     }),
+    // Follow the "Login with Email" tutorial to set up your email server
     EmailProvider({
       server: process.env.EMAIL_SERVER,
-      from: config.mailgun.form,
+      from: config.mailgun.fromNoReply,
     }),
   ],
+  // New users will be saved in Database (MongoDB Atlas). Each user (model) has some fields like name, email, image, etc.. Learn more about the model type: https://next-auth.js.org/v3/adapters/models
   adapter: MongoDBAdapter(connectMongo),
   callbacks: {
     session: async ({ session, token }) => {
