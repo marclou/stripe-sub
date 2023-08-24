@@ -12,7 +12,7 @@ export default async function handler(req, res) {
         // extract the email content, subject and sender
         const { "stripped-text": strippedText, subject, sender } = emailData;
 
-        if ((strippedText, subject, sender)) {
+        if (strippedText && subject && sender) {
           // send email to the admin
           await sendEmail(
             config.mailgun.forwardRepliesTo,
