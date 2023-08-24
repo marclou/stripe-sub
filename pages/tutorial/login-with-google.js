@@ -95,7 +95,8 @@ export default function Home() {
             . You can go ahead and do that now.
             <br />
             You can already login with Google on localhost. On production, it
-            will work too but show a warning until you&apos;re verified.
+            will work too but show a warning until you&apos;re verified (takes a
+            few days).
           </span>,
         ].map((step, i) => (
           <li key={i} className="list-item">
