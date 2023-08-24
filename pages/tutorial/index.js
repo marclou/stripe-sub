@@ -26,6 +26,11 @@ const Tutorial = () => {
             emoji: "📧",
           },
           {
+            name: "API calls & authentication",
+            href: "/tutorial/api",
+            emoji: "📡",
+          },
+          {
             name: "Login with Google",
             href: "/tutorial/login-with-google",
             optional: true,
@@ -36,6 +41,12 @@ const Tutorial = () => {
             href: "/tutorial/login-with-email",
             optional: true,
             emoji: "🔑",
+          },
+          {
+            name: "Error handling & customer support",
+            href: "/tutorial/errors-support",
+            optional: true,
+            emoji: "🛟",
           },
           {
             name: "Style & Components",
@@ -51,11 +62,11 @@ const Tutorial = () => {
             <div>
               <h2 className="font-bold md:text-lg md:mb-1">
                 {tutorial.emoji}&nbsp;&nbsp;&nbsp;{tutorial.name}{" "}
-                {tutorial.optional && (
+                {/* {tutorial.optional && (
                   <span className="badge badge-sm font-normal ml-1">
                     optional
                   </span>
-                )}
+                )} */}
               </h2>
               <p className="opacity-80 text-sm md:text-base">
                 {tutorial.description}

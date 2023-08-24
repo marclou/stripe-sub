@@ -6,7 +6,7 @@ export default function Home() {
       className={`flex max-w-3xl mx-auto min-h-screen flex-col gap-16 p-8 mb-24`}
     >
       <section>
-        <h1 className="text-3xl font-bold mb-4">Email Login — Ship Fast ⚡️</h1>
+        <h1 className="text-3xl font-bold mb-4">Errors — Ship Fast ⚡️</h1>
 
         <div className="text-sm breadcrumbs">
           <ul>
@@ -27,30 +27,30 @@ export default function Home() {
                 Tutorial
               </Link>
             </li>
-            <li>Email Login</li>
+            <li>Errors & Support</li>
           </ul>
         </div>
       </section>
 
-      <section>
-        <div className="mb-2">
-          <span className="badge badge-neutral">Setup</span>
-        </div>
-        <ul className="list-inside list-decimal space-y-5 leading-relaxed">
-          {[
-            <span key={1}>
-              If you haven&apos;t set up sending/receiving emails,{" "}
-              <Link href="/tutorial/emails" className="link">
-                do it first
-              </Link>
-            </span>,
-            "In config.js file, add an email 'from' field to mailgun.fromNoReply (usually noreply@mail.yourdomain.com)",
-          ].map((step, i) => (
-            <li key={i} className="list-item">
-              {step}
-            </li>
-          ))}
-        </ul>
+      <section className="leading-relaxed space-y-5">
+        <p>
+          The project comes with 404 and 500 error pages. Also, most Javascript
+          errors are handled in the{" "}
+          <pre className="inline">&lt;ErrorBoundary&gt;</pre> high-level
+          component.
+        </p>
+        <p>
+          When an error occurs, users can reach out support through the{" "}
+          <pre className="inline">&lt;ButtonSupport&gt;</pre> component.{" "}
+        </p>
+        <p>
+          By default, it will open the Crisp customer chat support (if crisp.id
+          is present in config.js)
+        </p>
+        <p>
+          If not, it will open the user mail client (mailto:) and let them them
+          an email to your email support (mailgun.supportEmail in config.js)
+        </p>
       </section>
     </main>
   );

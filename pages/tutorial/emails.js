@@ -37,6 +37,9 @@ export default function Home() {
           You don&apos;t have to use Mailgun, but you&apos;ll need an email tool
           to to setup magic login links, abandoned carts emails, etc...
         </p>
+        <div className="mb-2">
+          <span className="badge badge-neutral">Setup</span>
+        </div>
         <ul className="list-inside list-decimal space-y-5 leading-relaxed">
           {[
             <span key={1}>
