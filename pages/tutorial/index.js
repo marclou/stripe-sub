@@ -16,34 +16,39 @@ const Tutorial = () => {
       <section className="space-y-4">
         {[
           {
-            name: "MongoDB database",
+            name: "MongoDB",
             href: "/tutorial/mongodb-atlas",
             emoji: "📦",
           },
           {
-            name: "Sending & receiving emails",
+            name: "Mailgun",
             href: "/tutorial/emails",
             emoji: "📧",
           },
           {
-            name: "API calls & authentication",
+            name: "API",
             href: "/tutorial/api",
             emoji: "📡",
           },
           {
-            name: "Login with Google",
+            name: "Stripe",
+            href: "/tutorial/payments",
+            emoji: "💳",
+          },
+          {
+            name: "Google login",
             href: "/tutorial/login-with-google",
             optional: true,
             emoji: "🔑",
           },
           {
-            name: "Login with email",
+            name: "Email login",
             href: "/tutorial/login-with-email",
             optional: true,
             emoji: "🔑",
           },
           {
-            name: "Error handling & customer support",
+            name: "Customer support",
             href: "/tutorial/errors-support",
             optional: true,
             emoji: "🛟",
@@ -88,10 +93,32 @@ const Tutorial = () => {
         ))}
       </section>
       <div className="divider"></div>
-      <section>
+      <section className="space-y-5">
+        <h3 className="text-lg font-bold">Try the signup/logout flow</h3>
+        <p>
+          Find the code in the /tutorial/demo folder to get inspired and{" "}
+          <span className="font-medium">build your app fast ⚡️</span>
+        </p>
         <Link className="btn" href="/tutorial/demo">
           Start App Demo
         </Link>
+      </section>
+
+      <div className="divider"></div>
+      <section>
+        <p>
+          What do you think about this tutorial?{" "}
+          <a
+            href="https://twitter.com/marc_louvion"
+            target="_blank"
+            className="link"
+          >
+            Send me
+          </a>{" "}
+          your feedback on Twitter :)
+        </p>
+        <br />
+        <p>— Marc</p>
       </section>
     </main>
   );
