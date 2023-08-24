@@ -1,4 +1,4 @@
-import { sendEmail } from "@/libs/email";
+import { sendEmail } from "@/libs/mailgun";
 import config from "@/config";
 
 export default async function handler(req, res) {
