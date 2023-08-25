@@ -41,7 +41,10 @@ export default function Home() {
           emails, and more.
           <br />
           <br />
-          You can delete the whole /tutorial folder once you&apos;re ready.
+          Once you&apos;re ready, you can delete:
+          <br />
+          - The /tutorial folder
+          <br />- The content inside the /public folder
           <br />
           <br />
           If there&apos;s anything, you can reach out on{" "}
