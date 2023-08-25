@@ -7,7 +7,7 @@ export default function Home() {
       className={`flex max-w-3xl mx-auto min-h-screen flex-col gap-16 p-8 mb-24`}
     >
       <section>
-        <h1 className="text-3xl font-bold mb-4">Extra — Ship Fast ⚡️</h1>
+        <h1 className="text-3xl font-bold mb-4">The end — Ship Fast ⚡️</h1>
 
         <div className="text-sm breadcrumbs">
           <ul>
@@ -28,7 +28,7 @@ export default function Home() {
                 Tutorial
               </Link>
             </li>
-            <li>Extra</li>
+            <li>The end</li>
           </ul>
         </div>
       </section>
@@ -76,6 +76,20 @@ export default function Home() {
             </li>
           ))}
         </ul>
+
+        <div className="mt-12 text-lg text-base-content/80">
+          <b className="text-xl text-base-content">Ready to deploy? 🚀</b>
+          <br />
+          <br />
+          Make sure your .env variables are set in prod and ship that startup!
+          Congrats for making it this far 🙌
+          <br />
+          <br />
+          Go build something awesome, and tell us about it on Twitter! 🔥
+          <br />
+          <br />
+          —Marc
+        </div>
       </section>
       <div className="divider"></div>
       <section>

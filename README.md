@@ -1,37 +1,33 @@
 # Ship Fast
 
+Hey, it's Marc from [ShipFast](https://shipfa.st) 👋
+
+Follow the setups below to get started with this Next.js template.
+
 ## 1. Get Started
 
-Download node modules
+1. Clone this repo
+
+2. Download node modules
 
 ```bash
 npm install
 ```
 
-Then start the dev server
+3. Get in the repo
+
+```bash
+cd shipfast
+```
+
+3. Start the dev server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser and follow the tutorial.
 
-## 2. Setup
+Let's ship it, FAST ⚡️
 
-## 3. Customize
-
-### ESlint
-
-The .eslintrc.json file is can be customized with your own rules. You need a linter on your code editor to highlight errors.
-
-### TailwindCSS
-
-I use [TailwindCSS](https://tailwindcss.com/) as a CSS framework. I added some cool animations & components. See tailwind.config.js file.
-
-### DaisyUI
-
-I use [DaisyUI](https://daisyui.com/) as a UI kit. Open tailwind.config.js file to config the themes. Light & Dark themes are enabled by default.
-
-### Layout.js
-
-### Spotify Playlist \_ no joke
+—Marc
