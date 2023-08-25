@@ -6,7 +6,7 @@ import apiClient from "@/libs/api";
 
 const reactComponent = `
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "./auth/[...nextauth]";
+import { authOptions } from "../auth/[...nextauth]";
 import connectMongo from "@/libs/mongoose";
 import User from "@/models/User";
 
