@@ -39,8 +39,8 @@ export default function Home() {
           with our back-end (NextJS /api)
         </p>
         <p>
-          The front-end client handles errors gracefully, showing error toasts
-          if needed
+          The front-end client handles errors gracefully: show error toasts,
+          redirects on login if err 401, etc..
         </p>
         <p>
           The back-end should send back a JSON response with a message key if an
@@ -69,6 +69,26 @@ export default function Home() {
             Email Login
           </Link>
           . You can use next-auth to add any other Oauth provider.
+        </p>
+
+        <h2 className="font-bold text-xl pt-8">
+          Private routes (i.e. user account)
+        </h2>
+
+        <p>
+          If you add the hook usePrivate() to any page, it will redirect to the
+          login page if the user is not logged in.
+        </p>
+        <p>
+          Check the code examples to do it on the{" "}
+          <Link href="/tutorial/demo/dashboard" className="link">
+            front-end
+          </Link>{" "}
+          (private page) &{" "}
+          <Link href="/tutorial/demo/api-route" className="link">
+            back-end
+          </Link>{" "}
+          (private route)
         </p>
       </section>
     </main>

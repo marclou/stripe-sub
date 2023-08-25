@@ -22,7 +22,7 @@ export default function Landing() {
 
       <main
         className="min-h-screen p-12 pb-24 text-center"
-        // 👇 Where DaisyUI themes to apply (light & dark are enabled by default) see config.taildwind.js
+        // 👇 The DaisyUI themes to apply (light & dark are enabled by default, you need to add 'retro' in config.taildwind.js)
         data-theme="retro"
         // 👇 Use next/font package to add a custom font
         style={{

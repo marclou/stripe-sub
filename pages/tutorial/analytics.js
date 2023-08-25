@@ -33,15 +33,6 @@ export default function Home() {
       </section>
 
       <section className="leading-relaxed">
-        <p className="mb-5 ">
-          I use{" "}
-          <a href="https://plausible.io/sites" target="_blank" className="link">
-            Plausible
-          </a>{" "}
-          for traffic & events analytics. If you want to use another tool,
-          remove the Plausible script tag in the _document.js file.
-        </p>
-
         <div className="mb-2">
           <span className="badge badge-neutral">Setup</span>
         </div>
@@ -63,6 +54,17 @@ export default function Home() {
             </li>
           ))}
         </ul>
+
+        <div className="divider"></div>
+
+        <p className="mb-5 ">
+          I use{" "}
+          <a href="https://plausible.io/sites" target="_blank" className="link">
+            Plausible
+          </a>{" "}
+          for traffic & events analytics. If you want to use another tool,
+          remove the Plausible script tag in the _document.js file.
+        </p>
       </section>
     </main>
   );

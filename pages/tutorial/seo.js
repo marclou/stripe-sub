@@ -33,6 +33,30 @@ export default function Home() {
       </section>
 
       <section className="text-base-content/80 leading-relaxed space-y-5">
+        <div className="mb-2">
+          <span className="badge badge-neutral">Setup</span>
+        </div>
+
+        <p>
+          1. Open the <pre className="inline">&lt;TagSEO&gt;</pre> component and
+          add your default values (title, descrition, etc..) <br />
+          <br />
+          2. Add the <pre className="inline">&lt;TagSEO&gt;</pre> component to
+          each new pages your create and populate with the right values (title,
+          descrition, canonicalSlug—at least)
+          <br />
+          <br />
+          <p>
+            3. When relevant, add the{" "}
+            <pre className="inline">&lt;TagSchema&gt;</pre> component to your
+            pages/components. It helps Google understand better your website and
+            can get you a rich snippet. Open the component for more
+            documentation.
+          </p>
+        </p>
+
+        <div className="divider"></div>
+
         <p>
           The _document.js file has the most basic SEO tags (applied to all
           pages)
@@ -58,28 +82,6 @@ export default function Home() {
 
 </>)`}
         </pre>
-
-        <div className="mb-2">
-          <span className="badge badge-neutral">Setup</span>
-        </div>
-
-        <p>
-          1. Open the <pre className="inline">&lt;TagSEO&gt;</pre> component and
-          add your default values (title, descrition, etc..) <br />
-          <br />
-          2. Add the <pre className="inline">&lt;TagSEO&gt;</pre> component to
-          each new pages your create and populate with the right values (title,
-          descrition, canonicalSlug—at least)
-          <br />
-          <br />
-          <p>
-            3. When relevant, add the{" "}
-            <pre className="inline">&lt;TagSchema&gt;</pre> component to your
-            pages/components. It helps Google understand better your website and
-            can get you a rich snippet. Open the component for more
-            documentation.
-          </p>
-        </p>
       </section>
     </main>
   );

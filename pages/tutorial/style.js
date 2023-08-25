@@ -55,9 +55,8 @@ export default function Home() {
             >
               DaisyUI
             </a>{" "}
-            (UI kit). By default, we have 3 themes: light, dark & retro (for the
-            demo) . You can add more themes in tailwind.config.js &gt;
-            daisyui.themes
+            (UI kit). By default, 2 themes are enabled: light & dark. You can
+            add more themes in tailwind.config.js &gt; daisyui.themes
           </p>
         </div>
       </section>
