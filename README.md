@@ -24,7 +24,13 @@ cd [YOUR_APP_NAME]
 npm install
 ```
 
-4. Start the dev server
+4. Remove this repo as remote
+
+```bash
+git remote remove origin
+```
+
+5. Start the dev server
 
 ```bash
 npm run dev
