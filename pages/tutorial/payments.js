@@ -72,7 +72,7 @@ export default function Home() {
         <h2 className="text-xl font-bold mb-4">Create Checkout</h2>
         <p className="leading-relaxed">
           From the fron-end, use the apiClient (/libs/api.js) to POST our API at
-          /stripe/payment with the priceId & success/cancel URLs
+          /stripe/create-checkout with the priceId & success/cancel URLs
         </p>
       </section>
       <section>
