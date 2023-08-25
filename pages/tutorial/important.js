@@ -41,12 +41,6 @@ export default function Home() {
           emails, and more.
           <br />
           <br />
-          Once you&apos;re ready, you can delete:
-          <br />
-          - The /tutorial folder
-          <br />- The content inside the /public folder
-          <br />
-          <br />
           If there&apos;s anything, you can reach out on{" "}
           <a
             href="https://twitter.com/marc_louvion"
@@ -71,6 +65,7 @@ export default function Home() {
               "/components for React compoents you reuse accross pages",
               "/libs for external libraries functions, like mongoDB, Stripe, Mailgun",
               "/models where your mongoose models live",
+              "/hooks custom React hooks to simplify your life",
             ].map((a, i) => (
               <li key={i} className="flex gap-3 ">
                 <svg

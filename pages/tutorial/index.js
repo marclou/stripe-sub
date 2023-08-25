@@ -8,7 +8,7 @@ const Tutorial = () => {
       <section>
         <h1 className="text-3xl font-bold mb-5">Tutorials — Ship Fast ⚡️</h1>
         <p className="opacity-80">
-          Here&apos; a quick guide to help you get started and launch your
+          Here&apos;s a quick guide to help you get started and launch your
           startups FAST. ⚡️
         </p>
       </section>
@@ -117,18 +117,60 @@ const Tutorial = () => {
           </Link>
         ))}
       </section>
+
       <div className="divider"></div>
-      <section className="space-y-5">
-        <h3 className="text-lg font-bold">Try the signup/logout flow</h3>
-        <p className="text-base-content/80">
-          Find the code in the /tutorial/demo folder to get inspired and{" "}
+
+      <section>
+        <h3 className="text-xl md:text-2xl font-bold mb-4">Code examples</h3>
+        <p className="text-base-content/80 mb-8">
+          Copy/paste the code to build your pages quickly{" "}
           <span className="font-medium text-base-content">
-            build your app fast ⚡️
+            build your app faster ⚡️
           </span>
         </p>
-        <Link className="btn" href="/tutorial/demo">
-          Start App Demo
-        </Link>
+        <div className="space-y-4">
+          {[
+            {
+              name: "Static page (landing, pricing)",
+              href: "homepage",
+            },
+            {
+              name: "Private page (dashboard, account)",
+              href: "dashboard",
+            },
+            {
+              name: "API route",
+              href: "api-route",
+            },
+          ].map((tutorial, i) => (
+            <Link
+              key={tutorial.name}
+              href={`/tutorial/demo/${tutorial.href}`}
+              className="p-4 -mx-4 rounded-lg hover:bg-base-200 duration-200 flex justify-between items-center gap-2 group"
+            >
+              <div>
+                <h2 className="font-bold md:text-lg md:mb-1">
+                  {tutorial.name}
+                </h2>
+                <p className="opacity-80 text-sm md:text-base">
+                  {tutorial.description}
+                </p>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="w-5 h-5 group-hover:translate-x-0.5 duration-200"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </Link>
+          ))}
+        </div>
       </section>
 
       <div className="divider"></div>

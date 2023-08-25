@@ -1,3 +1,4 @@
+// eslint-disable-next-line @next/next/no-img-element
 import Link from "next/link";
 
 export default function Home() {
@@ -51,6 +52,24 @@ export default function Home() {
               _document.js file will automatically add the favicon (and other
               icons) to your site.
             </span>,
+            <span key={2}>
+              Create a rectangle logo with your name like this one.
+              <span className="block p-2">
+                <img
+                  src={`https://shipfa.st/logoAndName.png`}
+                  alt="ShipFast logo with name"
+                  width={100}
+                />
+              </span>
+              Name it logoWithName.png and add it to the /public folder.
+              Next-Auth will automatically add it to your login pages (see
+              [...nextauth].js).
+            </span>,
+            <span key={3}>
+              Delete the content inside the /public folder + delete the
+              /tutorial folder
+            </span>,
+            <span key={4}>npm uninstall react-syntax-highlighter</span>,
           ].map((step, i) => (
             <li key={i} className="list-item">
               {step}

@@ -41,6 +41,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* COLORS */}
+      <section>
+        <div className="mb-8">
+          <h2 className="text-lg font-bold mb-4">Colors & themes</h2>
+
+          <p className="opacity-80 leading-relaxed">
+            We&apos;re using TailwindCSS with{" "}
+            <a
+              href="https://daisyui.com/components/"
+              className="link"
+              target="_blank"
+            >
+              DaisyUI
+            </a>{" "}
+            (UI kit). By default, we have 3 themes: light, dark & retro (for the
+            demo) . You can add more themes in tailwind.config.js &gt;
+            daisyui.themes
+          </p>
+        </div>
+      </section>
+
       {/* ANIMATIONS */}
       <section>
         <div className="mb-8">

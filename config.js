@@ -49,6 +49,8 @@ const config = {
     // REQUIRED — This colors will be reflected on the whole app (loading bar, Chrome tabs, etc..) HEX only
     main: "#f37055",
   },
+  // REQUIRED — the path you want to redirect users after successfull login (i.e. /dashboard, /private). This is normally a private page for users to manage their accounts. It's used in appiClient (/libs/api.js) upon 401 errors from our API & /hooks/usePrivate.js
+  callbackUrl: "/dashboard",
 };
 
 export default config;
