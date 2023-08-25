@@ -46,6 +46,8 @@ const config = {
     forwardRepliesTo: "marc.louvion@gmail.com",
   },
   colors: {
+    // REQUIRED — The DaisyUI theme to use (added to _document.js). Leave blank for default (light & dark mode). If you any other theme than light/dark, you need to add it in config.tailwind.js in daisyui.themes.
+    theme: "dark",
     // REQUIRED — This colors will be reflected on the whole app (loading bar, Chrome tabs, etc..) HEX only
     main: "#f37055",
   },
