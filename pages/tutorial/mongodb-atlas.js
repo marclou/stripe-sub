@@ -65,7 +65,7 @@ export default function Home() {
       <section>
         <h2 className="font-bold text-xl mb-4">Mongoose (optional)</h2>
 
-        <p className="leading-relaxed">
+        <div className="leading-relaxed">
           Mongoose makes it easier to deal with MongoDB and has some cool
           features.
           <br />
@@ -76,7 +76,7 @@ export default function Home() {
           <pre className="inline bg-base-300 px-1">private: true</pre> to any
           field it will be removed from the response. I.e. make email private so
           it&apos;s not sent to the front-end.
-        </p>
+        </div>
       </section>
     </main>
   );

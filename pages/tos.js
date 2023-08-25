@@ -2,6 +2,28 @@ import Link from "next/link";
 import TagSEO from "@/components/TagSEO";
 import config from "@/config";
 
+// CHATGPT PROMPT TO GENERATE YOUR TERMS & SERVICES — replace with your own data
+
+// 1. Go to https://app.chatgpt.com/
+// 2. Copy paste bellow
+// 3. Replace the data with your own (if needed)
+
+// You are an excellent layer.
+
+// I need your help to write a simple privacy policy for my website. Here is some context:
+// - Website: https://shipfa.st
+// - Name: ShipFast
+// - Contact information: marc@shipfa.st
+// - Description: A JavaScript code boilerplate to help entrepreneurs launch their startups faster
+// - Ownership: when buying a package, users can download code to create apps. They own the code but they do not have the right to resell it. They can ask for a full refund within 7 day after the purchase.
+// - User data collected: name, email and payment information
+// - Non-personal data collection: web cookies
+// - Link to privacy-policy: https://shipfa.st/privacy-policy
+// - Governing Law: France
+// - Updates to the Terms: users will be updated by email
+
+// Please write a simple terms of service for my site. Add the current date. Do not add or explain your reasoning. Answer:
+
 const TOS = () => {
   return (
     <div className="max-w-xl mx-auto">
@@ -23,110 +45,48 @@ const TOS = () => {
           </svg>
           Back
         </Link>
-        <h1 className="text-3xl font-medium pb-6">Terms and Conditions</h1>
+        <h1 className="text-3xl font-bold pb-6">Privacy Policy for ShipFast</h1>
 
-        <div className="leading-relaxed">
-          1. Introduction
-          <br />
-          By using {config.appName} you confirm your acceptance of, and agree to
-          be bound by, these terms and conditions.
-          <br />
-          <br />
-          2. Agreement to Terms and Conditions
-          <br />
-          This Agreement takes effect on the date on which you first use the{" "}
-          {config.appName} application.
-          <br />
-          <br />
-          3. Unlimited Access Software License with Termination Rights
-          <br />
-          The {config.appName} Software License facilitates the acquisition of{" "}
-          {config.appName}
-          software through a single purchase, granting users unrestricted and
-          perpetual access to its comprehensive functionalities. Tailored for
-          independent creators, entrepreneurs, and small businesses,{" "}
-          {config.appName}
-          empowers users to create compelling web pages and online portfolios.
-          <br />
-          This license entails a straightforward and flexible arrangement,
-          exempting users from recurring fees or subscriptions. However, it is
-          important to acknowledge that the licensor retains the right to
-          terminate the license without conditions or prerequisites. This
-          termination provision enables the licensor to exercise control over
-          software distribution and utilization.
-          <br />
-          Opting for the {config.appName} Software License enables users to
-          enjoy the benefits of the software while recognizing the
-          licensor&apos;s unrestricted termination rights, which provide
-          adaptability and address potential unforeseen circumstances.
-          <br />
-          <br />
-          4. Refunds
-          <br />
-          {/* {config.appName} does not offer any refunds. If you are not satisfied with
-          the results of the Artificial Intelligence, we will grant you free
-          credits so you can get better results. */}
-          For any reason, you can request a refund within 7 days of your
-          purchase. If you are not satisfied with the product, then let us know
-          and we will refund your purchase right away.
-          <br />
-          <br />
-          5. Disclaimer
-          <br />
-          It is not warranted that {config.appName} will meet your requirements
-          or that its operation will be uninterrupted or error free. All express
-          and implied warranties or conditions not stated in this Agreement
-          (including without limitation, loss of profits, loss or corruption of
-          data, business interruption or loss of contracts), so far as such
-          exclusion or disclaimer is permitted under the applicable law are
-          excluded and expressly disclaimed. This Agreement does not affect your
-          statutory rights.
-          <br />
-          <br />
-          6. Warranties and Limitation of Liability
-          <br />
-          {config.appName} does not give any warranty, guarantee or other term
-          as to the quality, fitness for purpose or otherwise of the software.{" "}
-          {config.appName}
-          shall not be liable to you by reason of any representation (unless
-          fraudulent), or any implied warranty, condition or other term, or any
-          duty at common law, for any loss of profit or any indirect, special or
-          consequential loss, damage, costs, expenses or other claims (whether
-          caused by {config.appName}&apos;s negligence or the negligence of its
-          servants or agents or otherwise) which arise out of or in connection
-          with the provision of any goods or services by {config.appName}.{" "}
-          {config.appName} shall not be liable or deemed to be in breach of
-          contract by reason of any delay in performing, or failure to perform,
-          any of its obligations if the delay or failure was due to any cause
-          beyond its reasonable control. Notwithstanding contrary clauses in
-          this Agreement, in the event that
-          {config.appName} are deemed liable to you for breach of this
-          Agreement, you agree that {config.appName}&apos;s liability is limited
-          to the amount actually paid by you for your services or software,
-          which amount calculated in reliance upon this clause. You hereby
-          release {config.appName} from any and all obligations, liabilities and
-          claims in excess of this limitation.
-          <br />
-          <br />
-          7. Responsibilities
-          <br />
-          {config.appName} is not responsible for what the user does with the
-          user-generated content.
-          <br />
-          <br />
-          8. General Terms and Law
-          <br />
-          This Agreement is governed by the laws of France. You acknowledge that
-          no joint venture, partnership, employment, or agency relationship
-          exists between you and {config.appName} as a result of your use of
-          these services. You agree not to hold yourself out as a
-          representative, agent or employee of {config.appName}. You agree that{" "}
-          {config.appName} will not be liable by reason of any representation,
-          act or omission to act by you.
-          <br />
-          <br />
-          Last updated: 26 July 2023.
-        </div>
+        <pre
+          className="leading-relaxed whitespace-pre-wrap"
+          style={{ fontFamily: "sans-serif" }}
+        >
+          {`Last Updated: August 25, 2023
+
+This Privacy Policy describes how ShipFast ("we", "us", or "our") collects, uses, and protects the personal and non-personal information you provide on the ShipFast website (https://shipfa.st) and any related services. By accessing or using our website, you consent to the practices described in this policy.
+
+1. Information Collection
+
+We collect the following types of information:
+
+Personal Information: When you purchase a package on ShipFast, we collect your name, email address, and payment information. This information is used to process your order, provide customer support, and send important updates related to your purchase.
+
+Non-Personal Information: We may use web cookies to gather non-personal information such as your IP address, browser type, and referring pages. This helps us improve our website and tailor your experience.
+
+2. Ownership and Usage Rights
+
+When you purchase a package from ShipFast, you gain ownership of the code provided in the package. However, you do not have the right to resell or distribute the code as a standalone product. You can request a full refund within 7 days of your purchase if you are not satisfied with the product.
+
+3. Data Security
+
+We are committed to protecting your personal information. We use appropriate security measures to safeguard your data from unauthorized access, alteration, disclosure, or destruction.
+
+4. Governing Law
+
+This Privacy Policy is governed by the laws of France.
+
+5. Updates to the Privacy Policy
+
+We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. Changes will be effective as soon as the revised policy is posted on our website. We will notify you of any significant changes via email.
+
+For more details about our data collection, usage, and protection practices, please review our full Privacy Policy at https://shipfa.st/privacy-policy.
+
+If you have any questions or concerns about this Privacy Policy, please contact us at marc@shipfa.st.
+
+Thank you for using ShipFast!
+
+Date: August 25, 2023`}
+        </pre>
       </div>
     </div>
   );

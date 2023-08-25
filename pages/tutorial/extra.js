@@ -70,6 +70,10 @@ export default function Home() {
               /tutorial folder
             </span>,
             <span key={4}>npm uninstall react-syntax-highlighter</span>,
+            <span key={5}>
+              Use the ChatGPT script in /tos & /privacy-policy pages to generate
+              yours quickly! (not bulletproof, but it works for a quick start)
+            </span>,
           ].map((step, i) => (
             <li key={i} className="list-item">
               {step}
