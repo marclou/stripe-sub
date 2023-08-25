@@ -8,8 +8,8 @@ const Tutorial = () => {
       <section>
         <h1 className="text-3xl font-bold mb-5">Tutorials — Ship Fast ⚡️</h1>
         <p className="opacity-80">
-          Get started and launch your app asap. You can delete the whole
-          /tutorial folder once you&apos;re ready.
+          Here&apos; a quick guide to help you get started and launch your
+          startups FAST. ⚡️
         </p>
       </section>
 

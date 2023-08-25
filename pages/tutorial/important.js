@@ -41,6 +41,9 @@ export default function Home() {
           emails, and more.
           <br />
           <br />
+          You can delete the whole /tutorial folder once you&apos;re ready.
+          <br />
+          <br />
           If there&apos;s anything, you can reach out on{" "}
           <a
             href="https://twitter.com/marc_louvion"
@@ -49,7 +52,7 @@ export default function Home() {
           >
             Twitter
           </a>
-          . Let&apos;s build that startup FAST ⚡️
+          . Let&apos;s build that startup, FAST ⚡️
         </p>
 
         <div>

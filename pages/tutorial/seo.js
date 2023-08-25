@@ -55,7 +55,7 @@ export default function Home() {
   <main>
     <h1>Tutorial</h1>
   </main>
-  
+
 </>)`}
         </pre>
 
@@ -65,7 +65,20 @@ export default function Home() {
 
         <p>
           1. Open the <pre className="inline">&lt;TagSEO&gt;</pre> component and
-          add your default values (title, descrition, etc..){" "}
+          add your default values (title, descrition, etc..) <br />
+          <br />
+          2. Add the <pre className="inline">&lt;TagSEO&gt;</pre> component to
+          each new pages your create and populate with the right values (title,
+          descrition, canonicalSlug—at least)
+          <br />
+          <br />
+          <p>
+            3. When relevant, add the{" "}
+            <pre className="inline">&lt;TagSchema&gt;</pre> component to your
+            pages/components. It helps Google understand better your website and
+            can get you a rich snippet. Open the component for more
+            documentation.
+          </p>
         </p>
       </section>
     </main>

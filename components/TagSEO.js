@@ -16,7 +16,9 @@ const defaults = {
   },
 };
 
-// This components should be added to every pages you want to rank on Google (in /pages directory). It prefills data with default title/description/OG but you can cusotmize it for each page.
+// This components should be added to every pages you want to rank on Google (in /pages directory).
+// It prefills data with default title/description/OG but you can cusotmize it for each page.
+// REQUIRED: The canonicalSlug is required for each page (it's the slug of the page, without the domain name and without the trailing slash)
 const TagSEO = ({
   children,
   title,
