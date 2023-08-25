@@ -4,23 +4,27 @@ Hey, it's Marc from [ShipFast](https://shipfa.st) 👋
 
 Follow the setups below to get started with this Next.js template.
 
-## 1. Get Started
+## Get Started
 
 1. Clone this repo
 
-2. Download node modules
+```bash
+git clone https://github.com/marclou/ship-fast-code.git [YOUR_APP_NAME]
+```
+
+2. Get in the repo
+
+```bash
+cd [YOUR_APP_NAME]
+```
+
+3. Download node modules
 
 ```bash
 npm install
 ```
 
-3. Get in the repo
-
-```bash
-cd shipfast
-```
-
-3. Start the dev server
+4. Start the dev server
 
 ```bash
 npm run dev
