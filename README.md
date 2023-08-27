@@ -1,4 +1,4 @@
-# Ship Fast
+# ShipFast
 
 Hey, it's Marc from [ShipFast](https://shipfa.st) 👋
 
