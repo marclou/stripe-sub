@@ -4,6 +4,8 @@ Hey, it's Marc from [ShipFast](https://shipfa.st) 👋
 
 Follow the setups below to get started with this Next.js template.
 
+If there's anyting, reach out to me on [Twitter](https://twitter.com/marc_louvion).
+
 ## Get Started
 
 1. Clone this repo
