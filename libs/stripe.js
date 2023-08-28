@@ -40,7 +40,7 @@ export const createCheckout = async ({
       discounts: couponId
         ? [
             {
-              couponId,
+              coupon: couponId,
             },
           ]
         : [],
