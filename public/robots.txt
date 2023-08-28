@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://shipfa.st
+
+# Sitemaps
+Sitemap: https://shipfa.st/sitemap.xml

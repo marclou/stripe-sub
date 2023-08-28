@@ -46,13 +46,15 @@ export default function Home() {
           descrition, canonicalSlug—at least)
           <br />
           <br />
-          <p>
-            3. When relevant, add the{" "}
-            <pre className="inline">&lt;TagSchema&gt;</pre> component to your
-            pages/components. It helps Google understand better your website and
-            can get you a rich snippet. Open the component for more
-            documentation.
-          </p>
+          3. When relevant, add the{" "}
+          <pre className="inline">&lt;TagSchema&gt;</pre> component to your
+          pages/components. It helps Google understand better your website and
+          can get you a rich snippet. Open the component for more documentation.
+          <br />
+          <br />
+          4. Add your root URL to siteUrl (i.e. https://yourdomain.com) in the
+          next-sitemap.config.js file, in the root folder. It will generate a
+          sitemap.xml & robots.txt file for all your pages.
         </p>
 
         <div className="divider"></div>
