@@ -1,11 +1,7 @@
 import React from "react";
 
-const ButtonGradient = () => {
-  return (
-    <button className="btn btn-gradient animate-shimmer">
-      Gradient Button
-    </button>
-  );
+const ButtonGradient = ({ title = "Gradient Button" }) => {
+  return <button className="btn btn-gradient animate-shimmer">{title}</button>;
 };
 
 export default ButtonGradient;
