@@ -98,9 +98,13 @@ export default function Home() {
             <li>Static Page</li>
           </ul>
         </div>
-        <p className="opacity-80">
+        <p className="opacity-80 mb-4">
           Here&apos;s what your code would look like on your static pages
           (landing page, pricing, etc.)
+        </p>
+        <p className="opacity-80 ">
+          💡 The TagSEO component will make it much easier to deal with SEO tags
+          & rank on Google .
         </p>
       </section>
 
