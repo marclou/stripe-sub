@@ -6,7 +6,7 @@ import config from "@/config";
 
 // 1. Go to https://app.chatgpt.com/
 // 2. Copy paste bellow
-// 3. Replace the data with your own (if needed)
+// 3. Replace the data with your own—if needed
 
 // You are an excellent layer.
 
