@@ -96,13 +96,13 @@ export default function Home() {
           </p>
         </div>
         <div>
-          <h2 className="text-xl font-bold mb-4">The .env.local file</h2>
+          <h2 className="text-xl font-bold mb-4">The .env file</h2>
 
           <p className="opacity-80 leading-relaxed">
-            It is not committed to git, so you will need to create on your local
-            machine. & on your prod server (with the prod keys).
+            Copy the file <span className="text-base-content font-medium">.env.example</span> and rename it to <span className="text-base-content font-medium">.env.local</span> for development and <span className="text-base-content font-medium">.env</span> in production.
+            Please note that you should not commit those to GitHub.
             <br />
-            It should look like this at the end of this tutorial:
+            File content should look like this.
           </p>
 
           <pre className="whitespace-pre-wrap select-all p-4 rounded-lg bg-base-300 text-sm mt-2">

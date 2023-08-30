@@ -54,8 +54,8 @@ export default function Home() {
             "In your [Settings], [Customer Emails], turn on emails for successful payments & refunds",
             "In your [Settings], [Customer Portal], activate link to customer portal (in case you need later)",
             "In your [Payments], [Fraud & Risk], [Rules], make sure the firsrt 3DS rule is enabled. I also turn on the second one (recommended). Make sure to block payments if CVV fails (check below)",
-            "In your [Developers], copy your public & private keys and add them to STRIPE_SECRET_KEY & STRIPE_PUBLIC_KEY in .env.local & in your prod deployement",
-            "In your [Developers], [Webhook], [Add Enpoint]. Set your domain + /api/webhooks/stripe. Select [checkout.session.completed] event (or more if needed). Copy the signing secret and add it to STRIPE_WEBHOOK_SECRET in .env.local & in your prod deployement",
+            "In your [Developers], copy your public & private keys and add them to STRIPE_SECRET_KEY & STRIPE_PUBLIC_KEY in .env.local & in your prod deployment",
+            "In your [Developers], [Webhook], [Add Enpoint]. Set your domain + /api/webhooks/stripe. Select [checkout.session.completed] event (or more if needed). Copy the signing secret and add it to STRIPE_WEBHOOK_SECRET in .env.local & in your prod deployment",
             "To use Stripe in dev, turn on [Test Mode] on Stripe, and repeat the 2 steps above with your test keys & webhook secret (follow the Stripe tutorial to install the CLI)",
             "(optional) in [Balance], [Manage Payouts], set a specific date of the month to receive your payouts (I use the 10th of each month)",
           ].map((step, i) => (
