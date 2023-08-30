@@ -52,7 +52,7 @@ export default function Home() {
                 MongoDB Atlas
               </a>
             </span>,
-            "Add you connection string to MONGODB_URI in .env.local & in your prod deployement",
+            "Add you connection string to MONGODB_URI in .env.local & in your prod deployment",
             "Tip: Run a local database for your dev setup so you can work offline and it's faster",
           ].map((step, i) => (
             <li key={i} className="list-item">
