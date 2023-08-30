@@ -13,7 +13,7 @@ export default function Home() {
         <h1 className="text-3xl font-bold">Ship Fast ⚡️</h1>
 
         <p className="text-lg opacity-80">
-          This is the start of your new startup... What are you gonna build?
+          The start of your new startup... What are you gonna build?
         </p>
 
         <Link className="btn" href="/tutorial">
