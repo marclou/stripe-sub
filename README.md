@@ -2,9 +2,17 @@
 
 Hey, it's Marc from [ShipFast](https://shipfa.st) 👋
 
-Follow the setups below to get started with this Next.js template.
+Follow the steps below to get started with the boilerplate. After the quick tutorial, you'll have a supercharged app with:
 
-If there's anyting, reach out to me on [Twitter](https://twitter.com/marc_louvion).
+- payment processing
+- authentication
+- emails
+- SEO optimization
+- database schemas
+- components, animations & themes
+- and more!
+
+If there's anything, reach out to me on [Twitter](https://twitter.com/marc_louvion).
 
 ## Get Started
 
