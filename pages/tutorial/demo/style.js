@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
-import ButtonGradient from "../../components/ButtonGradient";
+import ButtonGradient from "@/components/ButtonGradient";
 import Modal from "@/components/Modal";
 import ButtonPopover from "@/components/ButtonPopover";
 import TestimonialSmall from "@/components/TestimonialSmall";
@@ -20,7 +20,7 @@ export default function Home() {
         <div className="text-sm breadcrumbs">
           <ul>
             <li>
-              <Link href="/tutorial" className="items-center flex gap-1">
+              <Link href="/tutorial#code" className="items-center flex gap-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -33,31 +33,11 @@ export default function Home() {
                     clipRule="evenodd"
                   />
                 </svg>
-                Tutorial
+                Code templates
               </Link>
             </li>
-            <li>Style & Components</li>
+            <li>Components & animations</li>
           </ul>
-        </div>
-      </section>
-
-      {/* COLORS */}
-      <section>
-        <div className="mb-8">
-          <h2 className="text-lg font-bold mb-4">Colors & themes</h2>
-
-          <p className="opacity-80 leading-relaxed">
-            We&apos;re using TailwindCSS with{" "}
-            <a
-              href="https://daisyui.com/components/"
-              className="link"
-              target="_blank"
-            >
-              DaisyUI
-            </a>{" "}
-            (UI kit). By default, 2 themes are enabled: light & dark. You can
-            add more themes in tailwind.config.js &gt; daisyui.themes
-          </p>
         </div>
       </section>
 
@@ -154,6 +134,26 @@ export default function Home() {
               <pre className="text-sm opacity-80">{c.name}</pre>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* COLORS */}
+      <section>
+        <div className="mb-8">
+          <h2 className="text-lg font-bold mb-4">Colors & themes</h2>
+
+          <p className="opacity-80 leading-relaxed">
+            We&apos;re using TailwindCSS with{" "}
+            <a
+              href="https://daisyui.com/components/"
+              className="link"
+              target="_blank"
+            >
+              DaisyUI
+            </a>{" "}
+            (UI kit). By default, 2 themes are enabled: light & dark. You can
+            add more themes in tailwind.config.js &gt; daisyui.themes
+          </p>
         </div>
       </section>
 

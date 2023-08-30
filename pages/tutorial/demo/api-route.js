@@ -73,7 +73,7 @@ export default function Home() {
         <div className="text-sm breadcrumbs mb-8">
           <ul>
             <li>
-              <Link href="/tutorial" className="items-center flex gap-1">
+              <Link href="/tutorial#code" className="items-center flex gap-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -86,7 +86,7 @@ export default function Home() {
                     clipRule="evenodd"
                   />
                 </svg>
-                Tutorial
+                Code templates
               </Link>
             </li>
             <li>API call</li>

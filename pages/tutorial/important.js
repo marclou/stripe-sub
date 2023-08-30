@@ -121,7 +121,7 @@ STRIPE_WEBHOOK_SECRET=`}
 
         <p>
           Now go ahead and follow the{" "}
-          <Link className="link" href="/tutorial">
+          <Link className="link" href="/tutorial#tuto">
             tutorials
           </Link>{" "}
           one-by-one.
