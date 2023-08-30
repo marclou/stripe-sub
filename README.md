@@ -11,7 +11,7 @@ If there's anyting, reach out to me on [Twitter](https://twitter.com/marc_louvio
 1. Clone this repo
 
 ```bash
-git clone https://github.com/marclou/ship-fast-code.git [YOUR_APP_NAME]
+git clone https://github.com/Marc-Lou-Org/ship-fast.git [YOUR_APP_NAME]
 ```
 
 2. Get in the repo
