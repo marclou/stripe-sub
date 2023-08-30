@@ -131,6 +131,16 @@ export default function Home() {
                 Overflow
               </a>
             </span>,
+            <span key={341321112}>
+              If you need cute SVG doodles, you can use{" "}
+              <a
+                href="https://www.figma.com/community/file/1019353050314527791"
+                className="link"
+                target="_blank"
+              >
+                Figma Doodles
+              </a>
+            </span>,
           ].map((step, i) => (
             <li key={i} className="list-item">
               {step}
