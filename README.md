@@ -14,6 +14,8 @@ Follow the steps below to get started with the boilerplate. After the quick tuto
 
 If there's anything, reach out to me on [Twitter](https://twitter.com/marc_louvion).
 
+**🔔 Watch/Star the repo to be notified when updates are pushed!**
+
 ## Get Started
 
 1. Clone this repo

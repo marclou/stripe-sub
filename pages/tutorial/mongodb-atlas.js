@@ -43,7 +43,7 @@ export default function Home() {
         <ul className="list-inside list-decimal space-y-5 leading-relaxed">
           {[
             <span key={1}>
-              Create a new project and deploy a cluser on{" "}
+              Create a new project and deploy a cluster on{" "}
               <a
                 href="https://cloud.mongodb.com/"
                 target="_blank"
