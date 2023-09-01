@@ -5,6 +5,7 @@ import Modal from "@/components/Modal";
 import ButtonPopover from "@/components/ButtonPopover";
 import TestimonialSmall from "@/components/TestimonialSmall";
 import BetterIcon from "@/components/BetterIcon";
+import FAQ from "@/components/FAQ";
 
 export default function Home() {
   const [key, setKey] = useState(0);
@@ -38,6 +39,94 @@ export default function Home() {
             </li>
             <li>Components & animations</li>
           </ul>
+        </div>
+      </section>
+
+      {/* COLORS */}
+      <section>
+        <div className="mb-8">
+          <h2 className="text-lg font-bold mb-4">Colors & themes</h2>
+
+          <p className="opacity-80 leading-relaxed">
+            We&apos;re using TailwindCSS with{" "}
+            <a
+              href="https://daisyui.com/components/"
+              className="link"
+              target="_blank"
+            >
+              DaisyUI
+            </a>{" "}
+            (UI kit). By default, 2 themes are enabled: light & dark. You can
+            add more themes in tailwind.config.js &gt; daisyui.themes
+          </p>
+        </div>
+      </section>
+
+      {/* COMPONENTS */}
+      <section>
+        <div className="mb-8">
+          <h2 className="text-lg font-bold mb-4">Components</h2>
+          <p className="opacity-80">
+            Lots of components (spinner, text input etc..) are available at{" "}
+            <a
+              href="https://daisyui.com/components/"
+              className="link"
+              target="_blank"
+            >
+              DaisyUI
+            </a>
+            .<br />
+            Here are the ones I made. Find them in the /components folder.
+          </p>
+        </div>
+        <div className="space-y-8">
+          {[
+            {
+              component: <ButtonGradient />,
+              show: true,
+              name: "<ButtonGradient />",
+            },
+            {
+              component: <ButtonPopover />,
+              show: true,
+              name: "<ButtonPopover />",
+            },
+            {
+              component: (
+                <div>
+                  <button className="btn" onClick={() => setIsModalOpen(true)}>
+                    Modal
+                  </button>
+                  <Modal
+                    isModalOpen={isModalOpen}
+                    setIsModalOpen={setIsModalOpen}
+                  />
+                </div>
+              ),
+              show: true,
+              name: "<Modal />",
+            },
+            {
+              component: <TestimonialSmall />,
+              show: true,
+              name: "<TestimonialSmall />",
+            },
+            { component: <BetterIcon />, show: true, name: "<BetterIcon />" },
+            { component: <FAQ />, show: false, name: "<FAQ />" },
+          ].map((c, i) => (
+            <div key={i} className="flex items-center justify-between">
+              <div>
+                {c.show ? (
+                  c.component
+                ) : (
+                  <span className="text-xs text-base-content/80 font-medium">
+                    see in /component folder
+                  </span>
+                )}
+              </div>
+              <pre className="text-sm opacity-80">{c.name}</pre>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -88,72 +177,6 @@ export default function Home() {
               <pre className="text-sm opacity-80">{a.name}</pre>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* COMPONENTS */}
-      <section>
-        <div className="mb-8">
-          <h2 className="text-lg font-bold mb-4">Components</h2>
-          <p className="opacity-80">
-            Lots of components (spinners, accordions etc..) are available at{" "}
-            <a
-              href="https://daisyui.com/components/"
-              className="link"
-              target="_blank"
-            >
-              DaisyUI
-            </a>
-            .<br />
-            Here are some extras I made. Find them in the /components folder.
-          </p>
-        </div>
-        <div className="space-y-8">
-          {[
-            { component: <ButtonGradient />, name: "<ButtonGradient />" },
-            { component: <ButtonPopover />, name: "<ButtonPopover />" },
-            {
-              component: (
-                <div>
-                  <button className="btn" onClick={() => setIsModalOpen(true)}>
-                    Modal
-                  </button>
-                  <Modal
-                    isModalOpen={isModalOpen}
-                    setIsModalOpen={setIsModalOpen}
-                  />
-                </div>
-              ),
-              name: "<Modal />",
-            },
-            { component: <TestimonialSmall />, name: "<TestimonialSmall />" },
-            { component: <BetterIcon />, name: "<BetterIcon />" },
-          ].map((c, i) => (
-            <div key={i} className="flex items-center justify-between">
-              <div>{c.component}</div>
-              <pre className="text-sm opacity-80">{c.name}</pre>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* COLORS */}
-      <section>
-        <div className="mb-8">
-          <h2 className="text-lg font-bold mb-4">Colors & themes</h2>
-
-          <p className="opacity-80 leading-relaxed">
-            We&apos;re using TailwindCSS with{" "}
-            <a
-              href="https://daisyui.com/components/"
-              className="link"
-              target="_blank"
-            >
-              DaisyUI
-            </a>{" "}
-            (UI kit). By default, 2 themes are enabled: light & dark. You can
-            add more themes in tailwind.config.js &gt; daisyui.themes
-          </p>
         </div>
       </section>
 
