@@ -12,8 +12,6 @@ Follow the steps below to get started with the boilerplate. After the quick tuto
 - components, animations & themes
 - and more!
 
-If there's anything, reach out to me on [Twitter](https://twitter.com/marc_louvion) or marc@shipfa.st
-
 **🔔 Watch/Star the repo to be notified when updates are pushed!**
 
 ## Get Started
@@ -50,6 +48,10 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser and follow the tutorial.
 
+If there's anything, reach out to me on [Twitter](https://twitter.com/marc_louvion) or marc@shipfa.st
+
 Let's ship it, FAST ⚡️
 
 —Marc
+
+PS: Want to showcase your startups? Get your [Indie Page](https://indiepa.ge?ref=shipfast_readme) and share your entrepreneurial journey. Join 2,432 founders ⭐️
