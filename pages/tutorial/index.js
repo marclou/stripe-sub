@@ -226,6 +226,18 @@ const Tutorial = () => {
         </p>
 
         <p>— Marc</p>
+
+        <p>
+          PS: Want to showcase your startups? Create your{" "}
+          <a
+            href="https://indiepa.ge?ref=shipfast_tuto"
+            className="link"
+            target="_blank"
+          >
+            Indie Page
+          </a>{" "}
+          and share your entrepreneurial journey. Join 2,702 founders ⭐️
+        </p>
       </section>
     </main>
   );
