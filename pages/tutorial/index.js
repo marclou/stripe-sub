@@ -147,31 +147,38 @@ const Tutorial = () => {
               name: "Components & animations",
               href: "style",
               emoji: "🎨",
+              description: "Buttons, popovers, modals, etc.",
             },
             {
-              name: "Libraries (Stripe, Mailgun, etc.)",
+              name: "Libraries",
               href: "libs",
               emoji: "📚",
+              description: "Stripe, Mailgun, Mongoose, OpenAI and more",
             },
             {
               name: "Webhooks",
               href: "webhook",
               emoji: "🪝",
+              description:
+                "Update users after Stripe checkout, forward emails you receive, etc.",
             },
             {
-              name: "Static page (landing, pricing)",
+              name: "Static page",
               href: "homepage",
               emoji: "🏠",
+              description: "Landing page, pricing, etc.",
             },
             {
-              name: "Private page (dashboard, account)",
+              name: "Private page",
               href: "dashboard",
               emoji: "🔒",
+              description: "User dashboard or account, for logged in users",
             },
             {
               name: "API route",
               href: "api-route",
               emoji: "📡",
+              description: "API routes to fetch data from the client",
             },
           ].map((tutorial, i) => (
             <Link
