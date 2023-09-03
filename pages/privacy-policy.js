@@ -27,7 +27,10 @@ import config from "@/config";
 const PrivacyPolicy = () => {
   return (
     <div className="max-w-xl mx-auto">
-      <TagSEO title={`Privacy Policy | ${config.appName}`} />
+      <TagSEO
+        title={`Privacy Policy | ${config.appName}`}
+        canonicalSlug="privacy-policy"
+      />
 
       <div className="p-5">
         <Link href="/" className="btn btn-ghost">

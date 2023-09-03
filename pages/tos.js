@@ -27,7 +27,10 @@ import config from "@/config";
 const TOS = () => {
   return (
     <div className="max-w-xl mx-auto">
-      <TagSEO title={`Terms and Conditions | ${config.appName}`} />
+      <TagSEO
+        title={`Terms and Conditions | ${config.appName}`}
+        canonicalSlug="tos"
+      />
 
       <div className="p-5">
         <Link href="/" className="btn btn-ghost">
