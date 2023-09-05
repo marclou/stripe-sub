@@ -12,7 +12,7 @@ Follow the steps below to get started with the boilerplate. After the quick tuto
 - components, animations & themes
 - and more!
 
-**🔔 Watch/Star the repo to be notified when updates are pushed!**
+**🔔 <ins>Watch/Star the repo to be notified when updates are pushed!</ins>**
 
 ## Get Started
 

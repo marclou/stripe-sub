@@ -9,50 +9,45 @@ export const createCheckout = async ({
   priceId,
   couponId,
 }) => {
-  try {
-    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-    const userParam = {};
+  const userParam = {};
 
-    if (user?.customerId) {
-      userParam.customer = user.customerId;
-    } else {
-      userParam.customer_creation = "always";
+  if (user?.customerId) {
+    userParam.customer = user.customerId;
+  } else {
+    userParam.customer_creation = "always";
 
-      if (user?.email) {
-        userParam.customer_email = user.email;
-      }
+    if (user?.email) {
+      userParam.customer_email = user.email;
     }
-
-    const stripeSession = await stripe.checkout.sessions.create({
-      mode: "payment",
-      ...userParam,
-      allow_promotion_codes: true,
-      invoice_creation: { enabled: true },
-      client_reference_id: clientReferenceID,
-      payment_intent_data: { setup_future_usage: "on_session" },
-      line_items: [
-        {
-          price: priceId,
-          quantity: 1,
-        },
-      ],
-      discounts: couponId
-        ? [
-            {
-              coupon: couponId,
-            },
-          ]
-        : [],
-      success_url: successUrl,
-      cancel_url: cancelUrl,
-    });
-
-    return stripeSession.url;
-  } catch (e) {
-    console.error(e);
-    return null;
   }
+
+  const stripeSession = await stripe.checkout.sessions.create({
+    mode: "payment",
+    ...userParam,
+    allow_promotion_codes: true,
+    invoice_creation: { enabled: true },
+    client_reference_id: clientReferenceID,
+    payment_intent_data: { setup_future_usage: "on_session" },
+    line_items: [
+      {
+        price: priceId,
+        quantity: 1,
+      },
+    ],
+    discounts: couponId
+      ? [
+          {
+            coupon: couponId,
+          },
+        ]
+      : [],
+    success_url: successUrl,
+    cancel_url: cancelUrl,
+  });
+
+  return stripeSession.url;
 };
 
 // This is used to create Customer Portal sessions, so users can manage their subscriptions (payment methods, cancel, etc..)

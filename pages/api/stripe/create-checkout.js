@@ -39,10 +39,11 @@ export default async function handler(req, res) {
             priceId: body.priceId,
             coupon,
           });
+
           return res.status(200).json({ url: stripeSessionURL });
         } catch (e) {
           console.error(e);
-          return res.status(500).json({ error: e });
+          return res.status(500).json({ error: e?.message });
         }
       }
 
