@@ -3,7 +3,8 @@ import Link from "next/link";
 import ButtonGradient from "@/components/ButtonGradient";
 import Modal from "@/components/Modal";
 import ButtonPopover from "@/components/ButtonPopover";
-import TestimonialSmall from "@/components/TestimonialSmall";
+import TestimonialRating from "@/components/TestimonialRating";
+import Testimonials1 from "@/components/Testimonials1";
 import Testimonials3 from "@/components/Testimonials3";
 import Testimonials11 from "@/components/Testimonials11";
 import BetterIcon from "@/components/BetterIcon";
@@ -115,9 +116,14 @@ export default function Home() {
                 name: "<Modal />",
               },
               {
-                component: <TestimonialSmall />,
+                component: <TestimonialRating />,
                 show: true,
-                name: "<TestimonialSmall />",
+                name: "<TestimonialRating />",
+              },
+              {
+                component: <Testimonials1 />,
+                show: false,
+                name: "<Testimonials1 />",
               },
               {
                 component: <Testimonials3 />,

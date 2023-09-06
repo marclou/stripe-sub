@@ -1,4 +1,4 @@
-const TestimonialSmall = () => {
+const TestimonialRating = () => {
   return (
     <div className="flex -gap-1 items-center mt-auto">
       <svg
@@ -68,4 +68,4 @@ const TestimonialSmall = () => {
   );
 };
 
-export default TestimonialSmall;
+export default TestimonialRating;
