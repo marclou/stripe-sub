@@ -5,8 +5,9 @@ import Modal from "@/components/Modal";
 import ButtonPopover from "@/components/ButtonPopover";
 import TestimonialSmall from "@/components/TestimonialSmall";
 import BetterIcon from "@/components/BetterIcon";
-import FAQ from "@/components/FAQ";
 import Pricing from "@/components/Pricing";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [key, setKey] = useState(0);
@@ -117,8 +118,9 @@ export default function Home() {
                 name: "<TestimonialSmall />",
               },
               { component: <BetterIcon />, show: true, name: "<BetterIcon />" },
-              { component: <FAQ />, show: false, name: "<FAQ />" },
               { component: <Pricing />, show: false, name: "<Pricing />" },
+              { component: <FAQ />, show: false, name: "<FAQ />" },
+              { component: <Footer />, show: false, name: "<Footer />" },
             ].map((c, i) => (
               <div key={i} className="flex items-center justify-between">
                 <div>
