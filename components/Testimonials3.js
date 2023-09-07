@@ -77,7 +77,7 @@ const Testimonial = ({ i }) => {
 const Testimonials3 = () => {
   return (
     <section id="testimonials">
-      <div className="py-24 px-4 max-w-7xl mx-auto">
+      <div className="py-24 px-8 max-w-7xl mx-auto">
         <div className="flex flex-col text-center w-full mb-20">
           <div className="mb-8">
             <h2 className="sm:text-5xl text-4xl font-extrabold text-base-content">

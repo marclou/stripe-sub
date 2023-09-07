@@ -4,6 +4,7 @@ import ButtonGradient from "@/components/ButtonGradient";
 import Modal from "@/components/Modal";
 import ButtonPopover from "@/components/ButtonPopover";
 import TestimonialRating from "@/components/TestimonialRating";
+import Header from "@/components/Header";
 import Testimonials1 from "@/components/Testimonials1";
 import Testimonials3 from "@/components/Testimonials3";
 import Testimonials11 from "@/components/Testimonials11";
@@ -96,6 +97,11 @@ export default function Home() {
                 component: <ButtonPopover />,
                 show: true,
                 name: "<ButtonPopover />",
+              },
+              {
+                component: <Header />,
+                show: false,
+                name: "<Header />",
               },
               {
                 component: (

@@ -4,7 +4,7 @@
 const Testimonial = () => {
   return (
     <section
-      className="relative isolate overflow-hidden bg-base-100 px-6 py-24 sm:py-32 lg:px-8"
+      className="relative isolate overflow-hidden bg-base-100 px-8 py-24 sm:py-32"
       id="testimonials"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.base-300),theme(colors.base-100))] opacity-20" />
