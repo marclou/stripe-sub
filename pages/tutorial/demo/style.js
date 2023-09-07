@@ -13,6 +13,7 @@ import Testimonials11 from "@/components/Testimonials11";
 import BetterIcon from "@/components/BetterIcon";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
+import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -156,6 +157,7 @@ export default function Home() {
               { component: <BetterIcon />, show: true, name: "<BetterIcon />" },
               { component: <Pricing />, show: false, name: "<Pricing />" },
               { component: <FAQ />, show: false, name: "<FAQ />" },
+              { component: <CTA />, show: false, name: "<CTA />" },
               { component: <Footer />, show: false, name: "<Footer />" },
             ].map((c, i) => (
               <div key={i} className="flex items-center justify-between">
