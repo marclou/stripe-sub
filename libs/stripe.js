@@ -28,6 +28,7 @@ export const createCheckout = async ({
     ...userParam,
     allow_promotion_codes: true,
     invoice_creation: { enabled: true },
+    tax_id_collection: { enabled: true },
     client_reference_id: clientReferenceID,
     payment_intent_data: { setup_future_usage: "on_session" },
     line_items: [
