@@ -1,8 +1,8 @@
 # ShipFast
 
-Hey, it's Marc from [ShipFast](https://shipfa.st) 👋
+Hey, it's Marc from [ShipFast](https://shipfa.st/docs) 👋
 
-Follow the steps below to get started with the boilerplate. After the quick tutorial, you'll have a supercharged app with:
+Follow the steps below to run your local server. Then follow the tutorials [in the documentation](https://shipfa.st/docs) to have a supercharged app with:
 
 - payment processing
 - authentication
@@ -46,7 +46,7 @@ git remote remove origin
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser and follow the tutorial.
+Open [http://localhost:3000](http://localhost:3000) in your browser and [follow the tutorials in the documentation](https://shipfa.st/docs).
 
 If there's anything, reach out to me on [Twitter](https://twitter.com/marc_louvion) or marc@shipfa.st
 
