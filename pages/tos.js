@@ -10,7 +10,7 @@ import config from "@/config";
 
 // You are an excellent layer.
 
-// I need your help to write a simple privacy policy for my website. Here is some context:
+// I need your help to write a simple Terms & Services for my website. Here is some context:
 // - Website: https://shipfa.st
 // - Name: ShipFast
 // - Contact information: marc@shipfa.st
@@ -22,7 +22,7 @@ import config from "@/config";
 // - Governing Law: France
 // - Updates to the Terms: users will be updated by email
 
-// Please write a simple terms of service for my site. Add the current date. Do not add or explain your reasoning. Answer:
+// Please write a simple Terms & Services for my site. Add the current date. Do not add or explain your reasoning. Answer:
 
 const TOS = () => {
   return (
