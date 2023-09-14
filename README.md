@@ -2,7 +2,7 @@
 
 Hey, it's Marc from [ShipFast](https://shipfa.st/docs) 👋
 
-Follow the steps below to run your local server. Then follow the tutorials [in the 📚 Documentation](https://shipfa.st/docs) to have a supercharged app with:
+Follow the steps below to run your local server. Then follow the tutorials in the [📚 Documentation](https://shipfa.st/docs) to have a supercharged app with:
 
 - payment processing
 - authentication
@@ -12,7 +12,7 @@ Follow the steps below to run your local server. Then follow the tutorials [in t
 - components, animations & themes
 - and more!
 
-**🔔 <ins>Watch/Star the repo to be notified when updates are pushed!</ins>**
+**🔔 <ins>Watch/Star the repo to be notified when updates are pushed</ins>**
 
 ## Get Started
 
@@ -46,7 +46,7 @@ git remote remove origin
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser and [follow the tutorials in the 📚 Documentation](https://shipfa.st/docs).
+Open [http://localhost:3000](http://localhost:3000) in your browser and follow the tutorials in the [📚 Documentation](https://shipfa.st/docs).
 
 If there's anything, reach out to me on [Twitter](https://twitter.com/marc_louvion) or marc@shipfa.st
 
