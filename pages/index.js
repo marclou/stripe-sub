@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import TagSEO from "@/components/TagSEO";
 import TagSchema from "@/components/TagSchema";
 
@@ -16,8 +14,12 @@ export default function Home() {
           The start of your new startup... What are you gonna build?
         </p>
 
-        <Link className="btn" href="/tutorial">
-          Show me how it works{" "}
+        <a
+          className="btn btn-primary"
+          href="https://shipfa.st/docs"
+          target="_blank"
+        >
+          Documentation & tutorials{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 20 20"
@@ -30,7 +32,7 @@ export default function Home() {
               clipRule="evenodd"
             />
           </svg>
-        </Link>
+        </a>
       </main>
     </>
   );
