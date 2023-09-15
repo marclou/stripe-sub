@@ -86,7 +86,7 @@ const config = {
     // OR you can just do this to use a custom color: main: "#f37055". HEX only.
     main: themes[`[data-theme=light]`]["primary"],
   },
-  // REQUIRED — the path you want to redirect users after successfull login (i.e. /dashboard, /private). This is normally a private page for users to manage their accounts. It's used in appiClient (/libs/api.js) upon 401 errors from our API & /hooks/usePrivate.js
+  // REQUIRED — the path you want to redirect users after successfull login (i.e. /dashboard, /private). This is normally a private page for users to manage their accounts. It's used in appClient (/libs/api.js) upon 401 errors from our API & /hooks/usePrivate.js
   callbackUrl: "/dashboard",
 };
 
