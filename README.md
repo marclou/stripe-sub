@@ -1,57 +1,29 @@
 # ShipFast
 
-Hey, it's Marc from [ShipFast](https://shipfa.st/docs) 👋
+Hey maker, it's Marc from [ShipFast](https://shipfa.st/docs) 👋
 
-Follow the steps below to run your local server. Then follow the tutorials in the [📚 Documentation](https://shipfa.st/docs) to have a supercharged app with:
+Let's get your startup off the ground, FAST ⚡️
 
-- payment processing
-- authentication
-- emails
-- SEO optimization
-- database schemas
-- components, animations & themes
-- and more!
-
-**🔔 <ins>Watch/Star the repo to be notified when updates are pushed</ins>**
+**🔔 Watch/Star the repo to be notified when updates are pushed**
 
 ## Get Started
 
-1. Clone this repo
+1. Clone the repo and run your local server: [Get Started](https://shipfa.st/docs) in the documentation will guide you 🗺️
 
-```bash
-git clone https://github.com/Marc-Lou-Org/ship-fast.git [YOUR_APP_NAME]
-```
+2. Start building: Follow [this tutorial](https://shipfa.st/docs/tutorials/ship-in-5-minutes) to ship your first product in 5 minutes ⚡️
 
-2. Get in the repo
+## Links
 
-```bash
-cd [YOUR_APP_NAME]
-```
+- [📚 Documentation](https://shipfa.st/docs)
+- [📣 Updates](https://shipfast.beehiiv.com/)
+- [🧑‍💻 Discord](https://shipfa.st/dashboard)
 
-3. Download node modules
+## Support
 
-```bash
-npm install
-```
+Reach out to me on [Twitter](https://twitter.com/marc_louvion) or marc@shipfa.st
 
-4. Remove this repo as remote
-
-```bash
-git remote remove origin
-```
-
-5. Start the dev server
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser and follow the tutorials in the [📚 Documentation](https://shipfa.st/docs).
-
-If there's anything, reach out to me on [Twitter](https://twitter.com/marc_louvion) or marc@shipfa.st
+---
 
 Let's ship it, FAST ⚡️
 
-—Marc
-
-PS: Want to showcase your startups? Get your [Indie Page](https://indiepa.ge?ref=shipfast_readme) and share your entrepreneurial journey. Join 2,432 founders ⭐️
+_Want to showcase your startups? Get your [Indie Page](https://indiepa.ge?ref=shipfast_readme) and share your entrepreneurial journey. Join 2,732 founders ⭐️_
