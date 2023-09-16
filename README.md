@@ -22,8 +22,6 @@ Let's get your startup off the ground, FAST ⚡️
 
 Reach out to me on [Twitter](https://twitter.com/marc_louvion) or marc@shipfa.st
 
----
-
 Let's ship it, FAST ⚡️
 
-_Want to showcase your startups? Get your [Indie Page](https://indiepa.ge?ref=shipfast_readme) and share your entrepreneurial journey. Join 2,732 founders ⭐️ _
+\*Want to showcase your startups? Get your [Indie Page](https://indiepa.ge?ref=shipfast_readme) and share your entrepreneurial journey. Join 2,732 founders ⭐️\*
