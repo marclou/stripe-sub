@@ -432,6 +432,7 @@ const FeaturesListicle = () => {
       <div className="max-w-3xl mx-auto">
         <div className="bg-base-100 max-md:px-8 max-w-3xl">
           <p className="text-accent font-medium text-sm font-mono mb-3">
+            {/* Pure decoration, you can remove it */}
             const launch_time = &quot;Today&quot;;
           </p>
           <h2 className="font-extrabold text-3xl lg:text-5xl tracking-tight mb-8">
