@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 
 const ButtonGradient = ({ title = "Gradient Button", onClick = () => {} }) => {
   return (

@@ -1,12 +1,13 @@
 import Link from "next/link";
-import TagSEO from "@/components/TagSEO";
+import { getSEOTags } from "@/libs/seo";
 import config from "@/config";
 
-// CHATGPT PROMPT TO GENERATE YOUR PRIVACY POLICY — replace with your own data
+// CHATGPT PROMPT TO GENERATE YOUR PRIVACY POLICY — replace with your own data 👇
 
 // 1. Go to https://app.chatgpt.com/
 // 2. Copy paste bellow
 // 3. Replace the data with your own (if needed)
+// 4. Paste the answer from ChatGPT directly in the <pre> tag below
 
 // You are an excellent layer.
 
@@ -24,14 +25,14 @@ import config from "@/config";
 
 // Please write a simple privacy policy for my site. Add the current date.  Do not add or explain your reasoning. Answer:
 
+export const metadata = getSEOTags({
+  title: `Privacy Policy | ${config.appName}`,
+  canonicalUrlRelative: "/privacy-policy",
+});
+
 const PrivacyPolicy = () => {
   return (
-    <div className="max-w-xl mx-auto">
-      <TagSEO
-        title={`Privacy Policy | ${config.appName}`}
-        canonicalSlug="privacy-policy"
-      />
-
+    <main className="max-w-xl mx-auto">
       <div className="p-5">
         <Link href="/" className="btn btn-ghost">
           <svg
@@ -48,7 +49,9 @@ const PrivacyPolicy = () => {
           </svg>{" "}
           Back
         </Link>
-        <h1 className="text-3xl font-bold pb-6">Privacy Policy for ShipFast</h1>
+        <h1 className="text-3xl font-extrabold pb-6">
+          Privacy Policy for {config.appName}
+        </h1>
 
         <pre
           className="leading-relaxed whitespace-pre-wrap"
@@ -101,7 +104,7 @@ For all other inquiries, please visit our Contact Us page on the Website.
 By using ShipFast, you consent to the terms of this Privacy Policy.`}
         </pre>
       </div>
-    </div>
+    </main>
   );
 };
 

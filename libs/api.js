@@ -3,7 +3,7 @@ import { toast } from "react-hot-toast";
 import { signIn } from "next-auth/react";
 import config from "@/config";
 
-// use this to interact with our own API (nextJS /api folder) from the front-end side
+// use this to interact with our own API (/app/api folder) from the front-end side
 const apiClient = axios.create({
   baseURL: "/api",
 });

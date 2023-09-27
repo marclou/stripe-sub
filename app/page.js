@@ -1,8 +1,8 @@
-export default function Home() {
+export default function Page() {
   return (
     <>
       <main className="flex min-h-screen flex-col items-center justify-center text-center gap-12 p-8">
-        <h1 className="text-3xl font-bold">Ship Fast ⚡️</h1>
+        <h1 className="text-3xl font-extrabold">Ship Fast ⚡️</h1>
 
         <p className="text-lg opacity-80">
           The start of your new startup... What are you gonna build?
