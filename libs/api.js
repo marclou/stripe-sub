@@ -33,6 +33,7 @@ apiClient.interceptors.response.use(
 
     console.error(error.message);
 
+    // Automatically display errors to the user
     if (error.message) {
       toast.error(error.message);
     } else {
