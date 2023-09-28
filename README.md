@@ -1,4 +1,4 @@
-# ShipFast — Javascript
+# ShipFast — Javascript.
 
 Hey maker, it's Marc from [ShipFast](https://shipfa.st/docs) 👋
 
