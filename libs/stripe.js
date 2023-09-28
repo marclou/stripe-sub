@@ -1,6 +1,6 @@
 import Stripe from "stripe";
 
-// This is the code for the createCheckout function for one-time payments (and save data for later of needed)
+// This is used to create a Stripe Checkout for one-time payments. It's usually triggered with the <ButtonCheckout /> component. Webhooks are used to update the user's state in the database.
 export const createCheckout = async ({
   priceId,
   successUrl,
