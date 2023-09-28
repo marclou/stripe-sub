@@ -5,7 +5,7 @@ import apiClient from "@/libs/api";
 
 // This component is used to create Stripe Checkout Sessions
 // It calls the /api/stripe/create-checkout route with the priceId, successUrl and cancelUrl
-// By default, user doesn't habe to be logged in. You can change that in the API route
+// By default, user doesn't have to be logged in. You can change that in the API route
 const ButtonCheckout = ({ priceId }) => {
   const [isLoading, setIsLoading] = useState(false);
 
