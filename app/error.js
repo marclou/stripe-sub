@@ -146,7 +146,9 @@ export default function Error({ error, reset }) {
             </svg>
             Refresh
           </button>
-          <ButtonSupport showTextOnSmall={true} />
+
+          <ButtonSupport />
+
           <Link href="/" className="btn btn-sm">
             <svg
               xmlns="http://www.w3.org/2000/svg"
