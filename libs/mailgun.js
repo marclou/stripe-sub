@@ -19,7 +19,7 @@ const mg = mailgun.client({
  * @param {string} replyTo - The email address to set as the "Reply-To" address.
  * @returns {Promise} A Promise that resolves when the email is sent.
  */
-export const sendEmail = async (to, subject, text, html, replyTo) => {
+export const sendEmail = async ({ to, subject, text, html, replyTo }) => {
   const data = {
     from: config.mailgun.fromAdmin,
     to: [to],
@@ -31,7 +31,7 @@ export const sendEmail = async (to, subject, text, html, replyTo) => {
 
   await mg.messages.create(
     (config.mailgun.subdomain ? `${config.mailgun.subdomain}.` : "") +
-    config.domainName,
+      config.domainName,
     data
   );
 };

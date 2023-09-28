@@ -13,13 +13,13 @@ export async function POST(req) {
 
     // send email to the admin if forwardRepliesTo is et & emailData exists
     if (config.mailgun.forwardRepliesTo && strippedText && subject && sender) {
-      await sendEmail(
-        config.mailgun.forwardRepliesTo,
-        `${config?.appName} | ${subject}`,
-        `Subject: ${subject}\n\nFrom: ${sender}\n\nContent:\n${strippedText}`,
-        `<div><p>Subject: ${subject}</p><p>From: ${sender}</p><p>Content:</p><p>${strippedText}</p></div>`,
-        sender
-      );
+      await sendEmail({
+        to: config.mailgun.forwardRepliesTo,
+        subject: `${config?.appName} | ${subject}`,
+        text: `Subject: ${subject}\n\nFrom: ${sender}\n\nContent:\n${strippedText}`,
+        html: `<div><p>Subject: ${subject}</p><p>From: ${sender}</p><p>Content:</p><p>${strippedText}</p></div>`,
+        replyTo: sender,
+      });
     }
 
     return NextResponse.json({});

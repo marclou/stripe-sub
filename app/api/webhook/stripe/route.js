@@ -79,7 +79,7 @@ export async function POST(req) {
 
         // Extra: send email with user link, product page, etc...
         // try {
-        //   await sendEmail(...);
+        //   await sendEmail({to: ...});
         // } catch (e) {
         //   console.error("Email issue:" + e?.message);
         // }
