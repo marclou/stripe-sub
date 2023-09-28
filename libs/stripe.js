@@ -2,12 +2,12 @@ import Stripe from "stripe";
 
 // This is the code for the createCheckout function for one-time payments (and save data for later of needed)
 export const createCheckout = async ({
-  user,
-  clientReferenceID,
+  priceId,
   successUrl,
   cancelUrl,
-  priceId,
   couponId,
+  clientReferenceId,
+  user,
 }) => {
   const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -29,7 +29,7 @@ export const createCheckout = async ({
     allow_promotion_codes: true,
     invoice_creation: { enabled: true },
     tax_id_collection: { enabled: true },
-    client_reference_id: clientReferenceID,
+    client_reference_id: clientReferenceId,
     payment_intent_data: { setup_future_usage: "on_session" },
     line_items: [
       {

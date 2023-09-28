@@ -20,15 +20,18 @@ export async function POST(req) {
   }
 
   try {
-    const { coupon, successUrl, cancelUrl, priceId } = body;
+    const { priceId, successUrl, cancelUrl } = body;
 
     const stripeSessionURL = await createCheckout({
+      priceId,
       successUrl,
       cancelUrl,
-      coupon,
-      priceId,
+      // If you send coupons from the frontend, you can pass it here
+      // couponId: body.couponId,
       // If you proceed checkout with logged in users, you can use this to identify the user later in the stripe webhook
-      // clientReferenceID: user._id.toString(),
+      // clientReferenceId: user._id.toString(),
+      // If you require users to be logged in, you can pass the user object here—it will automatically prefill data like email
+      // user: await User.findById({_id: "123"})
     });
 
     return NextResponse.json({ url: stripeSessionURL });
