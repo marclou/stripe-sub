@@ -5,6 +5,9 @@ import config from "@/config";
 // This route is used to receive emails from Mailgun and forward them to our customer support email.
 // See more: https://shipfa.st/docs/features/emails
 export async function POST(req) {
+  console.log(typeof req);
+  console.log(req);
+  console.log(JSON.stringify(req));
   const body = await req.json();
 
   try {
