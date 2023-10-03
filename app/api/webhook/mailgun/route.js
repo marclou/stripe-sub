@@ -8,7 +8,11 @@ export async function POST(req) {
   console.log(typeof req);
   console.log(req);
   console.log(JSON.stringify(req));
-  const body = await req.json();
+  console.log(req.body);
+  // const body = await req.json();
+  const body = "test";
+
+  return;
 
   try {
     // extract the email content, subject and sender
