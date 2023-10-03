@@ -10,6 +10,12 @@ export async function POST(req) {
     const formData = await req.formData();
     console.log("formData", formData);
     console.log("formData", JSON.stringify(formData));
+
+    const sender = formData.get("From");
+    const subject = formData.get("Subject");
+
+    console.log("sender", sender);
+    console.log("subject", subject);
   } catch (e) {
     console.log("ERROR", e);
   }
