@@ -7,6 +7,12 @@ import config from "@/config";
 export async function POST(req) {
   console.log("HEY?");
   try {
+    console.log("HEADER---");
+    console.log(req.headers);
+    console.log(JSON.stringify(req.headers));
+    console.log(req.headers.get("Content-Type"));
+    console.log("HEADER---");
+
     const formData = await req.formData();
     console.log("formData", formData);
     console.log("formData", JSON.stringify(formData));
