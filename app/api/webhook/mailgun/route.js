@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { headers } from "next/headers";
 import { sendEmail } from "@/libs/mailgun";
 import config from "@/config";
 
@@ -7,23 +6,8 @@ import config from "@/config";
 // See more: https://shipfa.st/docs/features/emails
 export async function POST(req) {
   try {
-    // console.log("HEADER---");
-    // const headersList = headers();
-    // console.log(headersList);
-    // console.log(JSON.stringify(headersList));
-    // console.log(headersList.get("Content-Type"));
-    // console.log("HEADER---");
-  } catch (e) {
-    console.log("ERROR", e);
-  }
-  // const body = await req.json();
-
-  try {
     // extract the email content, subject and sender
     const formData = await req.formData();
-    console.log("formData", formData);
-    console.log("formData", JSON.stringify(formData));
-
     const sender = formData.get("From");
     const subject = formData.get("Subject");
     const html = formData.get("body-html");
@@ -33,8 +17,7 @@ export async function POST(req) {
       await sendEmail({
         to: config.mailgun.forwardRepliesTo,
         subject: `${config?.appName} | ${subject}`,
-        // text: `Subject: ${subject}\n\nFrom: ${sender}\n\nContent:\n${strippedText}`,
-        html: `<div><p>Subject: ${subject}</p><p>From: ${sender}</p><p>Content:</p><p>${html}</p></div>`,
+        html: `<div><p><b>- Subject:</b> ${subject}</p><p><b>- From:</b> ${sender}</p><p><b>- Content:</b></p><div>${html}</div></div>`,
         replyTo: sender,
       });
     }
