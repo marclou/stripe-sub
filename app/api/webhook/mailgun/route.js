@@ -12,26 +12,26 @@ export async function POST(req) {
   // const body = await req.json();
   const body = "test";
 
-  return;
+  return NextResponse.json({});
 
-  try {
-    // extract the email content, subject and sender
-    const { "stripped-text": strippedText, subject, sender } = body;
+  // try {
+  //   // extract the email content, subject and sender
+  //   const { "stripped-text": strippedText, subject, sender } = body;
 
-    // send email to the admin if forwardRepliesTo is et & emailData exists
-    if (config.mailgun.forwardRepliesTo && strippedText && subject && sender) {
-      await sendEmail({
-        to: config.mailgun.forwardRepliesTo,
-        subject: `${config?.appName} | ${subject}`,
-        text: `Subject: ${subject}\n\nFrom: ${sender}\n\nContent:\n${strippedText}`,
-        html: `<div><p>Subject: ${subject}</p><p>From: ${sender}</p><p>Content:</p><p>${strippedText}</p></div>`,
-        replyTo: sender,
-      });
-    }
+  //   // send email to the admin if forwardRepliesTo is et & emailData exists
+  //   if (config.mailgun.forwardRepliesTo && strippedText && subject && sender) {
+  //     await sendEmail({
+  //       to: config.mailgun.forwardRepliesTo,
+  //       subject: `${config?.appName} | ${subject}`,
+  //       text: `Subject: ${subject}\n\nFrom: ${sender}\n\nContent:\n${strippedText}`,
+  //       html: `<div><p>Subject: ${subject}</p><p>From: ${sender}</p><p>Content:</p><p>${strippedText}</p></div>`,
+  //       replyTo: sender,
+  //     });
+  //   }
 
-    return NextResponse.json({});
-  } catch (e) {
-    console.error(e?.message);
-    return NextResponse.json({ error: e?.message }, { status: 500 });
-  }
+  //   return NextResponse.json({});
+  // } catch (e) {
+  //   console.error(e?.message);
+  //   return NextResponse.json({ error: e?.message }, { status: 500 });
+  // }
 }
