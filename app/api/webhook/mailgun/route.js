@@ -6,10 +6,9 @@ import config from "@/config";
 // See more: https://shipfa.st/docs/features/emails
 export async function POST(req) {
   console.log("HEY?");
-  console.log(typeof req);
-  console.log(req);
-  console.log(JSON.stringify(req));
-  console.log(req.body);
+  const formData = await req.formData();
+  console.log("formData", formData);
+  console.log("formData", JSON.stringify(formData));
   // const body = await req.json();
 
   return NextResponse.json({});
