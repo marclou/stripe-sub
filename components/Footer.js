@@ -19,14 +19,14 @@ const Footer = () => {
             >
               <Image
                 src={logo}
-                alt="ShipFast logo"
+                alt={`${config.appName} logo`}
                 priority={true}
                 className="w-6 h-6"
                 width={24}
                 height={24}
               />
               <strong className="font-extrabold tracking-tight text-base md:text-lg">
-                ShipFast
+                {config.appName}
               </strong>
             </Link>
 
