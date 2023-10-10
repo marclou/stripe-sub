@@ -9,7 +9,7 @@ import config from "@/config";
 // 3. Replace the data with your own (if needed)
 // 4. Paste the answer from ChatGPT directly in the <pre> tag below
 
-// You are an excellent layer.
+// You are an excellent lawyer.
 
 // I need your help to write a simple privacy policy for my website. Here is some context:
 // - Website: https://shipfa.st
