@@ -31,6 +31,11 @@ const userSchema = mongoose.Schema(
         return value.includes("price_");
       },
     },
+    // Used to determine if the user has access to the product—it's turn on/off by the Stripe webhook
+    hasAccess: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,

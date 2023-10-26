@@ -45,7 +45,7 @@ const config = {
         isFeatured: true,
         priceId:
           process.env.NODE_ENV === "development"
-            ? "price_1Nk4AbAxyNprDp7iXEPBvXju"
+            ? "price_1O5KtcAxyNprDp7iftKnrrpw"
             : "price_456",
         name: "Advanced",
         description: "You need more power",

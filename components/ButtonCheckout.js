@@ -5,8 +5,9 @@ import apiClient from "@/libs/api";
 
 // This component is used to create Stripe Checkout Sessions
 // It calls the /api/stripe/create-checkout route with the priceId, successUrl and cancelUrl
-// By default, user doesn't have to be logged in. You can change that in the API route
-const ButtonCheckout = ({ priceId }) => {
+// By default, it doesn't force users to be authenticated. But if they are, it will prefill the Checkout data with their email and/or credit card. You can change that in the API route
+// You can also change the mode to "subscription" if you want to create a subscription instead of a one-time payment
+const ButtonCheckout = ({ priceId, mode = "payment" }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handlePayment = async () => {
@@ -15,6 +16,7 @@ const ButtonCheckout = ({ priceId }) => {
     try {
       const res = await apiClient.post("/stripe/create-checkout", {
         priceId,
+        mode,
         successUrl: window.location.href,
         cancelUrl: window.location.href,
       });

@@ -38,7 +38,8 @@ export async function POST(req) {
   try {
     switch (eventType) {
       case "checkout.session.completed": {
-        // First payment is successful and the subscription is created | or the subscription was canceled so create new one
+        // First payment is successful and a subscription is created (if mode was set to "subscription" in ButtonCheckout)
+        // ✅ Grant access to the product
 
         const session = await findCheckoutSession(data.object.id);
 
@@ -72,9 +73,10 @@ export async function POST(req) {
           throw new Error("No user found");
         }
 
-        // update user data (for instance add credits)
+        // Update user data + Grant user access to your product. It's a boolean in the database, but could be a number of credits, etc...
         user.priceId = priceId;
         user.customerId = customerId;
+        user.hasAccess = true;
         await user.save();
 
         // Extra: send email with user link, product page, etc...
@@ -89,31 +91,65 @@ export async function POST(req) {
 
       case "checkout.session.expired": {
         // User didn't complete the transaction
-        // Can send an email to the user to remind him to complete the transaction, for instance
+        // You don't need to do anything here, by you can send an email to the user to remind him to complete the transaction, for instance
         break;
       }
 
       case "customer.subscription.updated": {
         // The customer might have changed the plan (higher or lower plan, cancel soon etc...)
-        const subscription = await stripe.subscriptions.retrieve(
-          data.object.id
-        );
-        const planId = subscription?.items?.data[0]?.price?.id;
-        // Do any operation here
+        // You don't need to do anything here, because Stripe will let us know when the subscription is canceled for good (at the end of the billing cycle) in the "customer.subscription.deleted" event
+        // You can update the user data to show a "Cancel soon" badge for instance
         break;
       }
 
       case "customer.subscription.deleted": {
-        // The customer stopped the subscription.
-        // Do any operation here
+        // The customer subscription stopped
+        // ❌ Revoke access to the product
+        // The customer might have changed the plan (higher or lower plan, cancel soon etc...)
+        const subscription = await stripe.subscriptions.retrieve(
+          data.object.id
+        );
+        const user = await User.findOne({ customerId: subscription.customer });
+
+        // Revoke access to your product
+        user.hasAccess = false;
+        await user.save();
+
         break;
       }
+
+      case "invoice.paid": {
+        // Customer just paid an invoice (for instance, a recurring payment for a subscription)
+        // ✅ Grant access to the product
+        const priceId = data.object.lines.data[0].price.id;
+        const customerId = data.object.customer;
+
+        const user = await User.findOne({ customerId });
+
+        // Make sure the invoice is for the same plan (priceId) the user subscribed to
+        if (user.priceId !== priceId) break;
+
+        // Grant user access to your product. It's a boolean in the database, but could be a number of credits, etc...
+        user.hasAccess = true;
+        await user.save();
+
+        break;
+      }
+
+      case "invoice.payment_failed":
+        // A payment failed (for instance the customer does not have a valid payment method)
+        // ❌ Revoke access to the product
+        // ⏳ OR wait for the customer to pay (more friendly):
+        //      - Stripe will automatically email the customer (Smart Retries)
+        //      - We will receive a "customer.subscription.deleted" when all retries were made and the subscription has expired
+
+        break;
 
       default:
       // Unhandled event type
     }
   } catch (e) {
-    console.error("stripe error: ", e.message);
+    console.error("stripe error: " + e.message + " | EVENT TYPE: " + eventType);
   }
 
   return NextResponse.json({});
