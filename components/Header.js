@@ -55,6 +55,8 @@ const Header = () => {
               className="w-8"
               placeholder="blur"
               priority={true}
+              width={32}
+              height={32}
             />
             <span className="font-extrabold text-lg">{config.appName}</span>
           </Link>
@@ -120,6 +122,8 @@ const Header = () => {
                 className="w-8"
                 placeholder="blur"
                 priority={true}
+                width={32}
+                height={32}
               />
               <span className="font-extrabold text-lg">{config.appName}</span>
             </Link>
