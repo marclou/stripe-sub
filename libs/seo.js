@@ -27,13 +27,6 @@ export const getSEOTags = ({
         ? "http://localhost:3000/"
         : `https://${config.domainName}/`
     ),
-    viewport: {
-      width: "device-width",
-      initialScale: 1,
-      maximumScale: 1,
-    },
-    // Will use the primary color of your theme to show a nice theme color in the URL bar of supported browsers
-    themeColor: config.colors.main,
 
     openGraph: {
       title: openGraph?.title || config.appName,
