@@ -9,11 +9,9 @@ const font = Inter({ subsets: ["latin"] });
 export const viewport = {
   // Will use the primary color of your theme to show a nice theme color in the URL bar of supported browsers
   themeColor: config.colors.main,
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-  },
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 // This adds default SEO tags to all pages in our app.
