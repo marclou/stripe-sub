@@ -26,4 +26,7 @@ Reach out to me on [Twitter](https://twitter.com/marc_louvion) or marc@shipfa.st
 
 Let's ship it, FAST ⚡️
 
-P.S. Want to showcase your startups? Get your [Indie Page](https://indiepa.ge?ref=shipfast_readme) and share your entrepreneurial journey. Join 2,732 founders ⭐️
+P.S.
+
+- Want to showcase your startups? Get your [Indie Page](https://indiepa.ge?ref=shipfast_readme) and share your entrepreneur's journey. Join 3,132 founders ⭐️
+- Setting up a new business? Don't get banned from Stripe for 1 dispute. Use [ByeDispute](https://byedispute.com/?ref=shipfast_readme) to prevent them from happenening.
