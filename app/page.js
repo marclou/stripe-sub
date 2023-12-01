@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ButtonSignin from "@/components/ButtonSignin";
 
 export default function Page() {
@@ -32,6 +33,10 @@ export default function Page() {
             />
           </svg>
         </a>
+
+        <Link href="/blog" className="link link-hover text-sm">
+          Fancy a blog?
+        </Link>
       </main>
     </>
   );
