@@ -1,4 +1,5 @@
 import Image from "next/image";
+import config from "@/config";
 
 const CTA = () => {
   return (
@@ -20,7 +21,9 @@ const CTA = () => {
             section...
           </p>
 
-          <button className="btn btn-primary btn-wide">Get ShipFast</button>
+          <button className="btn btn-primary btn-wide">
+            Get {config.appName}
+          </button>
         </div>
       </div>
     </section>
