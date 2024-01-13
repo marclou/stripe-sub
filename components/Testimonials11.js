@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import config from "@/config";
 
@@ -36,6 +39,9 @@ const refTypes = {
       </svg>
     ),
   },
+  video: {
+    id: "video",
+  },
   other: { id: "other" },
 };
 
@@ -54,6 +60,8 @@ const list = [
     link: "https://twitter.com/marc_louvion",
     // Optional, a statically imported image (usually from your public folder—recommended) or a link to the person's avatar. Shows a fallback letter if not provided
     img: "https://pbs.twimg.com/profile_images/1514863683574599681/9k7PqDTA_400x400.jpg",
+    // You can display video testimonials to build more trust. Just swap the type above to "video" and add at least the video source below
+    // videoSrc: "/jack.mp4"
   },
   {
     username: "the_mcnaveen",
@@ -94,10 +102,14 @@ const list = [
     type: refTypes.other,
   },
   {
-    username: "welcometobriami",
-    name: "Brian Kang",
-    text: "The tool is exactly what I didn't even know I needed. ",
-    type: refTypes.twitter,
+    name: "Marc Lou",
+    text: "The tool is exactly what I didn't even know I needed.",
+    videoPoster: "https://d1wkquwg5s1b04.cloudfront.net/demo/marcPoster.jpg",
+    videoSrc: "https://d1wkquwg5s1b04.cloudfront.net/demo/marcVideo.mp4",
+    videoHeight: 250,
+    videoWidth: 500,
+    videoType: "video/mp4",
+    type: refTypes.video,
   },
   {
     username: "zawwadx",
@@ -127,6 +139,10 @@ const Testimonial = ({ i }) => {
   const testimonial = list[i];
 
   if (!testimonial) return null;
+
+  if (testimonial.type === refTypes.video) {
+    return <VideoTestimonial i={i} />;
+  }
 
   return (
     <li key={i}>
@@ -179,6 +195,142 @@ const Testimonial = ({ i }) => {
   );
 };
 
+// A video tesionial to build trust. 2 or 3 on a wall of love is perfect.
+const VideoTestimonial = ({ i }) => {
+  const vidRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    if (vidRef.current?.readyState != 0) {
+      setIsLoading(false);
+    }
+  }, [vidRef?.current?.readyState]);
+
+  const handlePlayVideo = () => {
+    if (isPlaying) {
+      vidRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      vidRef.current.play();
+      setIsPlaying(true);
+
+      if (vidRef.current?.readyState === 0) setIsLoading(true);
+    }
+  };
+
+  const testimonial = list[i];
+
+  if (!testimonial) return null;
+
+  return (
+    <li
+      key={i}
+      className="break-inside-avoid max-md:flex justify-center bg-base-100 rounded-lg overflow-hidden flex flex-col"
+    >
+      <div className="relative w-full">
+        {isLoading && (
+          <span className="z-40 !h-24 !w-24 !bg-gray-50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 loading loading-ring"></span>
+        )}
+        <video
+          className="w-full"
+          ref={vidRef}
+          poster={testimonial.videoPoster}
+          preload="metadata"
+          playsInline
+          width={testimonial.videoWidth}
+          height={testimonial.videoHeight}
+          onLoadedData={() => {
+            console.log("Video is loaded!");
+            setIsLoading(false);
+          }}
+        >
+          <source
+            src={testimonial.videoSrc}
+            type={testimonial.videoType || "video/mp4"}
+          />
+          Your browser does not support the videos
+        </video>
+
+        {!isPlaying && (
+          <div className="absolute bottom-0 -inset-x-4 bg-gray-900/50 blur-lg h-24 translate-y-1/4 animate-opacity"></div>
+        )}
+
+        <div className="absolute w-full bottom-0 z-20">
+          <div className="flex justify-between items-end p-4">
+            <button
+              className="group cursor-pointer"
+              type="button"
+              title="Play video"
+              aria-label="Play video"
+              onClick={handlePlayVideo}
+            >
+              {isPlaying ? (
+                // PAUSE
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className=" w-14 h-14 fill-gray-50 group-hover:scale-[1.05] duration-100 ease-in drop-shadow-lg animate-opacity"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M6.75 5.25a.75.75 0 0 1 .75-.75H9a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H7.5a.75.75 0 0 1-.75-.75V5.25Zm7.5 0A.75.75 0 0 1 15 4.5h1.5a.75.75 0 0 1 .75.75v13.5a.75.75 0 0 1-.75.75H15a.75.75 0 0 1-.75-.75V5.25Z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              ) : (
+                // PLAY
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-14 h-14 fill-gray-50 group-hover:scale-[1.05] duration-100 ease-in drop-shadow-lg animate-opacity"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              )}
+            </button>
+
+            {!isPlaying && (
+              <div className="animate-opacity text-right">
+                <p className="text-gray-50 font-medium drop-shadow">
+                  {testimonial.name}
+                </p>
+                <div className="rating">
+                  {[...Array(5)].map((_, i) => (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="w-5 h-5 text-accent drop-shadow"
+                      key={i}
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <div className="relative z-20 bg-accent text-accent-content text-base leading-tight font-medium p-4 select-none">
+        <p>&quot;{testimonial.text}&quot;</p>
+      </div>
+    </li>
+  );
+};
+
 const Testimonials11 = () => {
   return (
     <section className="bg-base-200" id="testimonials">
@@ -191,7 +343,7 @@ const Testimonials11 = () => {
           </div>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-base-content/80">
             Don&apos;t take our word for it. Here&apos;s what they have to say
-            about ShipFast.
+            about {config.appName}.
           </p>
         </div>
 
@@ -225,7 +377,7 @@ const Testimonials11 = () => {
                           src={list[list.length - 1].img}
                           alt={`${
                             list[list.length - 1].name
-                          }'s testimonial for MakeLanding`}
+                          }'s testimonial for ${config.appName}`}
                           width={48}
                           height={48}
                         />
