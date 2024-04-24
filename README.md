@@ -21,7 +21,7 @@ Hey maker 👋 it's Marc from [ShipFast](https://shipfa.st/docs). Let's get your
 
 ## Support
 
-Reach out to me on [Twitter](https://twitter.com/marc_louvion) or marc@shipfa.st
+Reach out at marc@shipfa.st
 
 \_
 
