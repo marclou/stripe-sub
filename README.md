@@ -1,6 +1,13 @@
 # Stripe subscriptions
 
-## 1. Create an .env.local at the root and add the following variables
+## 1. Clone the project
+
+```bash
+git clone https://github.com/marclou/stripe-sub.git
+cd stripe-subscriptions
+```
+
+## 2. Create an .env.local at the root and add the following variables
 
 ```bash
 # AUTHENTICATION (tuto > https://shipfa.st/docs/features/magic-links)
@@ -18,14 +25,16 @@ STRIPE_SECRET_KEY=rk_test_**********
 STRIPE_WEBHOOK_SECRET=whsec_**********
 ```
 
-## 2. Run the project
+## 3. Run the project
 
 ```bash
 npm i
 npm run dev
 ```
 
-Enjoy!
+## 4. Add your Stripe info in <Pricing /> component
+
+Enjoy! — Marc
 
 PS: Want to ship you SaaS in days, not weeks? Join 3,000+ makers on
 [Shipfast](https://shipfa.st)!

@@ -5,29 +5,17 @@ import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import logo from '@/app/icon.png';
 
-// Stripe Plans
+// Stripe Plans >> fill in your own priceId & link
 export const plans = [
     {
-        link:
-            process.env.NODE_ENV === 'development'
-                ? 'https://buy.stripe.com/test_4gw9Ep0tG8OzdAA3cg'
-                : '',
-        priceId:
-            process.env.NODE_ENV === 'development'
-                ? 'price_1PCxqQClvsFHzmDAGpD1MFww'
-                : '',
+        link: process.env.NODE_ENV === 'development' ? '********' : '',
+        priceId: process.env.NODE_ENV === 'development' ? '********' : '',
         price: 19,
         duration: '/month'
     },
     {
-        link:
-            process.env.NODE_ENV === 'development'
-                ? 'https://buy.stripe.com/test_00g9Ep90c5Cn8gg9AF'
-                : '',
-        priceId:
-            process.env.NODE_ENV === 'development'
-                ? 'price_1PCxrmClvsFHzmDAUALMRIeP'
-                : '',
+        link: process.env.NODE_ENV === 'development' ? '********' : '',
+        priceId: process.env.NODE_ENV === 'development' ? '********' : '',
 
         price: 99,
         duration: '/year'
