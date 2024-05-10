@@ -1,35 +1,31 @@
-# ShipFast — Javascript
+# Stripe subscriptions
 
-Hey maker 👋 it's Marc from [ShipFast](https://shipfa.st/docs). Let's get your startup off the ground, FAST ⚡️
+## 1. Create an .env.local at the root and add the following variables
 
-<sub>**Watch/Star the repo to be notified when updates are pushed**</sub>
+```bash
+# AUTHENTICATION (tuto > https://shipfa.st/docs/features/magic-links)
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=************
 
-## Get Started
+# EMAILS (tuto > https://shipfa.st/docs/features/emails)
+EMAIL_SERVER=smtp://*********
 
-1. Follow the [Get Started Tutorial](https://shipfa.st/docs) to clone the repo and run your local server 💻
+# DATABASE (tuto > https://shipfa.st/docs/features/database)
+MONGODB_URI=mongodb://127.0.0.1:27017/**********
 
-<sub>**Looking for the /pages router version?** Use this [documentation](https://shipfa.st/docs-old) instead</sub>
+# STRIPE PAYMENTS (tuto: https://shipfa.st/docs/features/payments)
+STRIPE_SECRET_KEY=rk_test_**********
+STRIPE_WEBHOOK_SECRET=whsec_**********
+```
 
-2. Follow the [Ship In 5 Minutes Tutorial](https://shipfa.st/docs/tutorials/ship-in-5-minutes) to learn the foundation and ship your app quickly ⚡️
+## 2. Run the project
 
-## Links
+```bash
+npm i
+npm run dev
+```
 
--   [📚 Documentation](https://shipfa.st/docs)
--   [📣 Updates](https://shipfast.beehiiv.com/)
--   [🧑‍💻 Discord](https://shipfa.st/dashboard)
--   [🥇 Leaderboard](https://shipfa.st/leaderboard)
+Enjoy!
 
-## Support
-
-Reach out at marc@shipfa.st
-
-\_
-
-Let's ship it, FAST ⚡️
-
-P.S.
-
--   Want to showcase your startups? Get your [Indie Page](https://indiepa.ge?ref=shipfast_readme) and share your entrepreneur's journey. Join 3,132 founders ⭐️
--   Don't get banned from Stripe for 1 dispute. Use [ByeDispute](https://byedispute.com/?ref=shipfast_readme) to prevent them from happenening 🛡️
--   Make your launch go viral and get your first customers with [LaunchViral](https://launchvir.al/?ref=shipfast_readme) 🚀
--   Stop paying 0.4% per Stripe invoices [Zenvoice](https://zenvoice.io/?ref=shipfast_readme) 🤕
+PS: Want to ship you SaaS in days, not weeks? Join 3,000+ makers on
+[Shipfast](https://shipfa.st)!
